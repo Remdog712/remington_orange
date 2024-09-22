@@ -1,0 +1,272 @@
+/* about.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #2C2C2C;
+    background-color: #F5F5F0; /* Cream */
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    background-image: url('rugged-texture.png'); /* Add your texture image */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    background-color: rgba(245, 245, 240, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s;
+}
+
+.logo a:hover .logo-image {
+    transform: rotate(360deg);
+}
+
+.logo h1 {
+    margin-left: 10px;
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    line-height: 1;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dark-grey {
+    color: #4A4A4A;
+}
+
+.orange {
+    color: #D97742;
+}
+
+.logo h1 a:hover .dark-grey {
+    color: #D97742;
+}
+
+.logo h1 a:hover .orange {
+    color: #4A4A4A;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-weight: 300;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    font-weight: 300; /* Match font weight with buttons */
+}
+
+nav ul li a:hover {
+    color: #D97742;
+}
+
+/* About Section */
+.about-section {
+    padding: 150px 20px 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the section takes full screen height */
+}
+
+.about-blurb {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.2em;
+    color: #4A4A4A;
+}
+
+/* Image Stack */
+.image-stack {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-stack img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.image-stack img.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.image-stack img.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image-title {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #D97742;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+/* Resume Section */
+.resume-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.resume-viewer {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #D97742;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.resume-buttons {
+    margin-top: 20px;
+}
+
+.resume-buttons .button {
+    margin: 0 10px;
+}
+
+/* Resume Download Button */
+.resume-buttons .button {
+    padding: 12px 24px; /* More padding for a larger button */
+    background-color: #D97742; /* Main button color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1.2em; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight for a strong look */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a raised effect */
+    cursor: pointer;
+}
+
+.resume-buttons .button:hover {
+    background-color: #E39361; /* Lighter shade for hover effect */
+    transform: translateY(-3px); /* Lift the button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.resume-buttons .button:active {
+    transform: translateY(0); /* Return to original position when clicked */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Softer shadow on click */
+}
+
+/* Easy Reader Toggle */
+.easy-reader-toggle {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.easy-reader-toggle input {
+    display: none;
+}
+
+.easy-reader-toggle label {
+    display: inline-block;
+    background-color: #D97742;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.easy-reader-toggle label:hover {
+    background-color: #E39361;
+}
+
+/* Contact Section */
+.contact-info {
+    display: flex;
+    justify-content: flex-start; /* Move content higher by starting at the top */
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh; /* Full viewport height */
+    padding-top: 100px; /* Adjust this value to control how high you want it */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5em;
+}
+
+.contact-item i {
+    color: #D97742; /* Icon color */
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #4A4A4A;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #D97742; /* Hover color */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #4A4A4A;
+    color: #fff;
+    text-align: center;
+    position: relative; /* Keep footer at the bottom of the content */
+    width: 100%;
+}
