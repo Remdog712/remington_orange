@@ -162,11 +162,14 @@ nav ul li a:hover {
 }
 
 .resume-viewer {
-    width: 80%;
-    height: 600px;
+    width: 95%;
+    height: 1000px;
     margin: 0 auto;
     border: 1px solid #D97742;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    font-size: 1.5em; /* Increase the font size */
+    line-height: 1.8; /* Increase line spacing for better readability */
 }
 
 .resume-buttons {

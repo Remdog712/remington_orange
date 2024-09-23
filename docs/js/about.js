@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     easyReaderToggle.addEventListener('change', function() {
         if (easyReaderToggle.checked) {
-            resumeFrame.src = 'resume_easy_reader.pdf'; // Replace with your easy reader document
+            resumeFrame.src = 'Wixmedia/RemingtonOrangeEasyReadResume.pdf'; // Replace with your easy reader document
         } else {
-            resumeFrame.src = 'resume.pdf'; // Original resume document
+            resumeFrame.src = 'Wixmedia/RemingtonOrangeResume.pdf'; // Original resume document
         }
     });
 });
