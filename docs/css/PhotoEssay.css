@@ -1,0 +1,304 @@
+/* project.css */
+/* Header Styling */
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #2C2C2C;
+    background-color: #F5F5F0; /* Cream */
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    background-image: url('rugged-texture.png'); /* Add your texture image */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    background-color: rgba(245, 245, 240, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s;
+}
+
+.logo a:hover .logo-image {
+    transform: rotate(360deg);
+}
+
+.logo h1 {
+    margin-left: 10px;
+    font-size: 1.8em;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    line-height: 1;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dark-grey {
+    color: #4A4A4A;
+}
+
+.orange {
+    color: #D97742;
+}
+
+.logo h1 a:hover .dark-grey {
+    color: #D97742;
+}
+
+.logo h1 a:hover .orange {
+    color: #4A4A4A;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-weight: 300;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    font-weight: 300; /* Match font weight with buttons */
+}
+
+nav ul li a:hover {
+    color: #D97742;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 60vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image Inside Hero Section */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+    z-index: -1; /* Send the image to the back */
+}
+
+/* Overlay Styling */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(76, 76, 76, 0.6); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.project-title {
+    color: #fff;
+    font-size: 3em;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 100px; /* Adjust to match header height */
+    padding-bottom: 20px; /* Add padding to the bottom */
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #D97742;
+    font-size: 1.2em;
+    padding: 10px 20px; /* Add padding for button-like appearance */
+    background-color: #F5F5F0; /* Background color of the button */
+    border: 2px solid #D97742; /* Border for the button */
+    border-radius: 30px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.back-button a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #D97742; /* Change background color on hover */
+    border-color: #E39361; /* Change border color on hover */
+    transform: translateY(-3px); /* Lift the button slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+/* Content Section Styling */
+.content-section {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Description Text Styling */
+.description p {
+    font-size: 1.4em;
+    color: #4A4A4A;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+/* YouTube Embed Styling */
+.youtube-container {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.youtube-container iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border: none;
+}
+
+/* Gallery Grid for Photo Essay */
+.photo-essay {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for more focus on each photo */
+    gap: 50px;
+}
+
+.essay-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.essay-section img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.essay-text {
+    font-size: 1.2em;
+    color: #4A4A4A;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 20px;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Lightbox for Gallery Images */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+#lightbox .lightbox-content {
+    position: relative;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80%;
+    display: block;
+}
+
+#lightbox-img {
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.lightbox-description {
+    color: #F5F5F0;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 10px auto 0;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #F5F5F0;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjustments for Fixed Header */
+body {
+    padding-top: 80px; /* Height of the fixed header */
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .youtube-container iframe {
+        height: 250px;
+    }
+
+    .essay-text {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .essay-text {
+        font-size: 1em;
+    }
+}
