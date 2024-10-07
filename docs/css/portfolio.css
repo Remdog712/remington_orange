@@ -1,5 +1,3 @@
-/* portfolio.css */
-
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -98,122 +96,78 @@ nav ul li a:hover {
     color: #D97742;
 }
 
-/* Page Title */
 .page-title {
     text-align: center;
     font-size: 3em;
     color: #D97742;
-    margin-top: 150px;
+    margin-top: 100px; /* Adjusted for fixed header */
     font-family: 'Courier New', monospace;
 }
 
-/* Portfolio Grid */
-.portfolio-grid {
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #D97742;
+    margin-top: 50px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 750px;
-    margin: 0 auto 50px;
-    padding: 0 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
 }
 
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    aspect-ratio: 1 / 1; /* Ensure square items */
-    display: block; /* Ensure block-level layout */
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image fills the container */
-    transition: transform 0.3s;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.05);
-}
-
-.portfolio-item .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    background: rgba(76, 76, 76, 0.8);
-    color: #fff;
-    transform: translateY(100%);
-    transition: transform 0.3s;
-}
-
-.portfolio-item:hover .overlay {
-    transform: translateY(0);
-}
-
-.portfolio-item .overlay h3 {
-    margin: 0 0 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.portfolio-item .overlay p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-/* Larger images in the gallery */
 .gallery-wrapper img {
-    width: 250px; /* Increased width */
-    height: 250px; /* Increased height */
+    width: 100%;
+    height: auto;
+    max-width: 200px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-/* Hover effect to zoom images */
 .gallery-wrapper img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Slider bar and handle */
-.slider {
-    width: 100%;
-    height: 10px;
-    background-color: #ddd;
-    position: relative;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.slider-handle {
-    width: 20px;
-    height: 20px;
-    background-color: #333;
-    position: absolute;
-    top: -5px;
-    left: 0;
-    border-radius: 50%;
+/* Navigation Buttons Styles */
+.gallery-nav button {
+    background-color: #D97742; /* Orange color */
+    border: none;
+    color: #fff; /* White text */
+    font-size: 2em;
     cursor: pointer;
+    margin: 20px 10px; /* Adjust margins */
+    padding: 20px 40px; /* Adjust padding to make buttons larger */
     transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Rounded corners */
 }
 
-.slider-handle:active {
-    background-color: #666;
+.gallery-nav button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #fff;
 }
 
-/* Make sure the container holds only one gallery */
-.slider-container {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 20px;
+.gallery-nav button:hover:not(:disabled) {
+    background-color: #bf6537; /* Darker orange on hover */
 }
 
-.gallery-wrapper {
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    gap: 10px;
-    padding-bottom: 10px; /* Space between images and slider */
+.gallery-nav button i {
+    color: inherit;
 }
 
 /* Lightbox Styles */
@@ -273,6 +227,7 @@ nav ul li a:hover {
     margin: 0 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border: none;
 }
 
 .filter-buttons .button:hover,
@@ -280,13 +235,56 @@ nav ul li a:hover {
     background-color: #E39361;
 }
 
-/* Section Title */
-.section-title {
-    text-align: center;
-    font-size: 2.5em;
-    color: #D97742;
-    margin-top: 50px;
-    font-family: 'Courier New', monospace;
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(76, 76, 76, 0.8);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.portfolio-item .overlay h3 {
+    margin: 0 0 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.portfolio-item .overlay p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 /* Footer */
@@ -296,11 +294,17 @@ footer {
     color: #fff;
     text-align: center;
     width: 100%;
+    position: relative;
 }
 
-/* Responsive Adjustments */
-@media only screen and (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+/* Responsive Design */
+@media (max-width: 600px) {
+    .gallery-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-nav button {
+        font-size: 1.5em;
+        padding: 15px 30px;
     }
 }
