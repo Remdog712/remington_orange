@@ -4,13 +4,15 @@
     <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <title>Remington Orange Portfolio</title>
+    <!-- Updated Google Fonts to include 'Special Elite' -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/PhotoEssay.css">
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous" referrerpolicy="no-referrer">
-    <!-- Include Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Image Div -->
+    <div class="background-image"></div>
 
     <!-- Header -->
     <header>
@@ -34,83 +36,135 @@
         <a href="../portfolio.html">&larr; Back to Projects</a>
     </div>
 
-<!-- Hero Section with Image Instead of Background Image -->
-<section class="hero-section">
-    <img src="../WixMedia/Projects/Photo202/IMG_2140.JPG" alt="RO Logo" class="hero-image">
-    <div class="overlay">
-        <h1 class="project-title">Nature Reclaims - A Photo Essay</h1>
+    <!-- Hero Section with Updated Image -->
+    <section class="hero-section">
+        <img src="../WixMedia/Projects/Photo202/redux/Truck_HeroImage.jpg" alt="Hero Image" class="hero-image">
+        <!-- Adjusted overlay for grey fade -->
+        <div class="overlay">
+            <h1 class="project-title">Nature Reclaims - A Photo Essay</h1>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="description">
+            <p>
+                In a quiet, abandoned corner of Erie, nature has slowly begun to reclaim what was once intended for human habitation. A housing development that never materialized left behind more than just bare plots of land. Scattered across the site are remnants of human effort—tractors, a rusting car, an idle excavator, a forgotten boat, and piles of debris. Once symbols of progress, these machines have now been surrendered to the elements, left to blend into the landscape they once dominated.
+            </p>
+        </div>
+
+        <!-- YouTube Embed with Autoplay, Mute, and Hidden Controls -->
+        <div class="youtube-container">
+            <iframe src="https://www.youtube.com/embed/90DRPAM_Q0w?autoplay=1&mute=1&controls=0&loop=1&playlist=90DRPAM_Q0w&modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <!-- Additional Text Between YouTube and First Image Section -->
+        <div class="additional-text">
+            <p>
+                As the video fades, the story unfolds through images capturing the relentless encroachment of nature upon man-made structures. Each frame tells a tale of time, neglect, and the unstoppable force of the natural world reclaiming its territory.
+            </p>
+        </div>
+
+        <!-- Photo Essay Layout -->
+        <div class="photo-essay">
+            <!-- Section 1: Truck Images (moved to the top) -->
+            <div class="essay-section" data-background-image="../WixMedia/Projects/Photo202/redux/IMG_2101.jpg">
+                <!-- Main Image -->
+                <div class="main-image">
+                    <img src="../WixMedia/Projects/Photo202/redux/IMG_2101.jpg" alt="Reclamation" class="gallery-item large-image">
+                </div>
+                <!-- Thumbnails -->
+                <div class="thumbnail-group">
+                    <img src="../WixMedia/Projects/Photo202/redux/IMG_2101.jpg" alt="Reclamation" class="gallery-item thumbnail selected">
+                    <img src="../WixMedia/Projects/Photo202/redux/IMG_3341.jpg" alt="Reclamation" class="gallery-item thumbnail">
+                </div>
+                <p class="essay-text">
+                    The beauty of this scene lies in the unexpected harmony between the natural and the industrial. Once opposing forces, they now coexist in a way that feels both inevitable and strangely balanced. What was designed to pollute and reshape the land has, in its abandonment, become part of a new ecosystem—one where nature reclaims, renews, and thrives. This slow, steady transformation is a reminder of nature’s resilience, its ability to outlast and eventually reclaim everything humanity leaves behind.
+                </p>
+            </div>
+
+            <!-- Adjusted the numbering of the following sections accordingly -->
+
+            <!-- Section 2: Crane Images -->
+            <div class="essay-section" data-background-image="../WixMedia/Projects/Photo202/redux/Crane_Far.jpg">
+                <!-- Main Image -->
+                <div class="main-image">
+                    <img src="../WixMedia/Projects/Photo202/redux/Crane_Far.jpg" alt="Digging Into The Earth" class="gallery-item large-image">
+                </div>
+                <!-- Thumbnails -->
+                <div class="thumbnail-group">
+                    <img src="../WixMedia/Projects/Photo202/redux/Crane_Far.jpg" alt="Digging Into The Earth" class="gallery-item thumbnail selected">
+                    <img src="../WixMedia/Projects/Photo202/redux/Crane_Bucket.jpg" alt="Digging Into The Earth" class="gallery-item thumbnail">
+                    <img src="../WixMedia/Projects/Photo202/redux/Crane_Close.jpg" alt="Digging Into The Earth" class="gallery-item thumbnail">
+                </div>
+                <p class="essay-text">
+                    The metal of the machines, once polished and powerful, has begun to corrode, a slow surrender to the relentless autumn rains and sun. Rust spreads across their surfaces, flaking away layers of industry and purpose. Goldenrods, thriving in the fertile soil around the machinery, now grow in and around the rusted remains. These once air-polluting machines—designed to reshape and extract from the earth—have become unlikely places where plants bloom and wildlife finds new shelter. The contrast between the bright yellow blooms of the goldenrods and the deteriorating metal creates a stunning texture, a beautiful blend of nature overtaking what was once meant to conquer it.
+                </p>
+            </div>
+
+            <!-- Section 3: Car Images -->
+            <div class="essay-section" data-background-image="../WixMedia/Projects/Photo202/redux/Car_Font.jpg">
+                <!-- Main Image -->
+                <div class="main-image">
+                    <img src="../WixMedia/Projects/Photo202/redux/Car_Font.jpg" alt="Trapped" class="gallery-item large-image">
+                </div>
+                <!-- Thumbnails -->
+                <div class="thumbnail-group">
+                    <img src="../WixMedia/Projects/Photo202/redux/Car_Font.jpg" alt="Trapped" class="gallery-item thumbnail selected">
+                    <img src="../WixMedia/Projects/Photo202/redux/Car_top.jpg" alt="Trapped" class="gallery-item thumbnail">
+                </div>
+                <p class="essay-text">
+                    This is not a scene of mere decay, but of quiet persistence. Left untended, the ground has come alive again. What was once a site for human development is now a testament to nature’s ability to reclaim what was lost. Saplings push through the cracks in the machinery, their roots slowly prying apart the structures built to contain them. The greens and yellows of the plants stand in sharp contrast to the dull, weathered metal that litters the area. The interplay between the remnants of human ambition and the unstoppable force of nature continues.
+                </p>
+            </div>
+
+            <!-- Section 4: Boat Images -->
+            <div class="essay-section" data-background-image="../WixMedia/Projects/Photo202/redux/Boat_Far.jpg">
+                <!-- Main Image -->
+                <div class="main-image">
+                    <img src="../WixMedia/Projects/Photo202/redux/Boat_Far.jpg" alt="Floating Among The Weeds" class="gallery-item large-image">
+                </div>
+                <!-- Thumbnails -->
+                <div class="thumbnail-group">
+                    <img src="../WixMedia/Projects/Photo202/redux/Boat_Far.jpg" alt="Floating Among The Weeds" class="gallery-item thumbnail selected">
+                    <img src="../WixMedia/Projects/Photo202/redux/Boat_Top.jpg" alt="Floating Among The Weeds" class="gallery-item thumbnail">
+                </div>
+                <p class="essay-text">
+                    Nature’s reclamation is not aggressive but patient, working slowly and steadily. Grass fills the spaces between broken machines, while vines wrap themselves around rusted beams, blending the artificial with the organic. Rainwater pools in the deep indentations left by heavy equipment, nourishing the plant life that now dominates the site. Sunny days bring warmth that intensifies the growth, while rainy weather hastens the rusting of the old machines. Each passing day sees nature quietly but persistently moving forward, reclaiming more of the land. The silence here is profound, interrupted only by the sounds of nature reasserting itself.
+                </p>
+            </div>
+
+            <!-- Section 5: Tractor Images -->
+            <div class="essay-section" data-background-image="../WixMedia/Projects/Photo202/redux/Tractor_Front.jpg">
+                <!-- Main Image -->
+                <div class="main-image">
+                    <img src="../WixMedia/Projects/Photo202/redux/Tractor_Front.jpg" alt="Stillness" class="gallery-item large-image">
+                </div>
+                <!-- Thumbnails -->
+                <div class="thumbnail-group">
+                    <img src="../WixMedia/Projects/Photo202/redux/Tractor_Front.jpg" alt="Stillness" class="gallery-item thumbnail selected">
+                    <img src="../WixMedia/Projects/Photo202/redux/Tractor.jpg" alt="Stillness" class="gallery-item thumbnail">
+                </div>
+                <p class="essay-text">
+                    In this forgotten place, the balance between nature and human progress has shifted completely. What was meant to be a housing development, a mark of human ambition, now stands as a reminder that no matter how enduring our constructions may seem, they are always temporary in the face of time and neglect. The machines, once symbols of industry and expansion, now sit idle, overcome by the very environment they were meant to control. The final remnants of industry stand as silent witnesses to nature's enduring power.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox for Gallery Images -->
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+        <div class="lightbox-description" id="lightbox-description"></div>
     </div>
-</section>
 
-<!-- Content Section -->
-<section class="content-section">
-    <div class="description">
-        <p>
-            In a quiet, abandoned corner of Erie, nature has slowly begun to reclaim what was once intended for human habitation. A housing development that never materialized left behind more than just bare plots of land. Scattered across the site are remnants of human effort—tractors, a rusting car, an idle excavator, a forgotten boat, and piles of debris. Once symbols of progress, these machines have now been surrendered to the elements, left to blend into the landscape they once dominated.
-        </p>
-    </div>
-
-    <!-- Optional YouTube Embed -->
-    <div class="youtube-container">
-        <iframe src="https://www.youtube.com/embed/EmLXqewVN80" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <!-- Photo Essay Layout -->
-    <div class="photo-essay">
-        <!-- Section 1 -->
-        <div class="essay-section">
-            <img src="../WixMedia/Projects/Photo202/IMG_2556.JPG" alt="Ruined" class="gallery-item">
-            <p class="essay-text">The metal of the machines, once polished and powerful, has begun to corrode, a slow surrender to the relentless autumn rains and sun. Rust spreads across their surfaces, flaking away layers of industry and purpose. Goldenrods, thriving in the fertile soil around the machinery, now grow in and around the rusted remains. These once air-polluting machines—designed to reshape and extract from the earth—have become unlikely places where plants bloom and wildlife finds new shelter. The contrast between the bright yellow blooms of the goldenrods and the deteriorating metal creates a stunning texture, a beautiful blend of nature overtaking what was once meant to conquer it.
-            </p>
-        </div>
-
-        <!-- Section 2 -->
-        <div class="essay-section">
-            <img src="../WixMedia/Projects/Photo202/IMG_2497.JPG" alt="Buried" class="gallery-item">
-            <p class="essay-text">This is not a scene of mere decay, but of quiet persistence. Left untended, the ground has come alive again. What was once a site for human development is now a testament to nature’s ability to reclaim what was lost. Saplings push through the cracks in the machinery, their roots slowly prying apart the structures built to contain them. The greens and yellows of the plants stand in sharp contrast to the dull, weathered metal that litters the area.
-            </p>
-        </div>
-
-        <!-- Section 3 -->
-        <div class="essay-section">
-            <img src="../WixMedia/Projects/Photo202/IMG_3288.JPG" alt="Driving Force" class="gallery-item">
-            <p class="essay-text">Nature’s reclamation is not aggressive but patient, working slowly and steadily. Grass fills the spaces between broken machines, while vines wrap themselves around rusted beams, blending the artificial with the organic. Rainwater pools in the deep indentations left by heavy equipment, nourishing the plant life that now dominates the site. Sunny days bring warmth that intensifies the growth, while rainy weather hastens the rusting of the old machines. Each passing day sees nature quietly but persistently moving forward, reclaiming more of the land.
-            </p>
-        </div>
-
-        <!-- Section 4 -->
-        <div class="essay-section">
-            <img src="../WixMedia/Projects/Photo202/IMG_2117.JPG" alt="Casted" class="gallery-item">
-            <p class="essay-text">In this forgotten place, the balance between nature and human progress has shifted completely. What was meant to be a housing development, a mark of human ambition, now stands as a reminder that no matter how enduring our constructions may seem, they are always temporary in the face of time and neglect. The machines, once symbols of industry and expansion, now sit idle, overcome by the very environment they were meant to control.
-            </p>
-        </div>
-
-        <!-- Section 5 -->
-        <div class="essay-section">
-            <img src="../WixMedia/Projects/Photo202/IMG_2665.JPG" alt="Looking Back" class="gallery-item">
-            <p class="essay-text">The beauty of this scene lies in the unexpected harmony between the natural and the industrial. Once opposing forces, they now coexist in a way that feels both inevitable and strangely balanced. What was designed to pollute and reshape the land has, in its abandonment, become part of a new ecosystem—one where nature reclaims, renews, and thrives. This slow, steady transformation is a reminder of nature’s resilience, its ability to outlast and eventually reclaim everything humanity leaves behind.
-            </p>
-        </div>
-
-        <!-- Section 6 -->
-        <div class="essay-section">
-            <img src="../WixMedia/Projects/Photo202/IMG_2644.JPG" alt="Overgrown" class="gallery-item">
-            <p class="essay-text"></p>
-        </div>
-    </div>
-</section>
-
-<!-- Lightbox for Gallery Images -->
-<div id="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
-    <div class="lightbox-description" id="lightbox-description"></div>
-</div>
     <!-- Footer -->
     <footer>
     </footer>
 
     <!-- JavaScript -->
-    <script src="../js/project.js"></script>
+    <script src="../js/photoessay.js"></script>
 </body>
 </html>

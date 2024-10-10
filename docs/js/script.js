@@ -26,28 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Gallery navigation functionality
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
+    // Vertical Slider functionality
+    const slider = document.querySelector('.vertical-slider');
+    const slides = document.querySelectorAll('.vertical-slider .slide');
+    const upButton = document.querySelector('.slider-nav.up');
+    const downButton = document.querySelector('.slider-nav.down');
     let currentIndex = 0;
 
     function updateSliderPosition() {
-        if (slides.length === 0) return;
-        const slideWidth = slides[0].offsetWidth;
-        const slideMarginRight = parseInt(getComputedStyle(slides[0]).marginRight);
-        const totalSlideWidth = slideWidth + slideMarginRight;
-        slider.style.transform = `translateX(-${currentIndex * totalSlideWidth}px)`;
+        const slideHeight = slides[0].offsetHeight;
+        slider.style.transform = `translateY(-${currentIndex * slideHeight}px)`;
     }
 
     function showNextSlide() {
-        if (slides.length === 0) return;
-        const slideWidth = slides[0].offsetWidth;
-        const slideMarginRight = parseInt(getComputedStyle(slides[0]).marginRight);
-        const totalSlideWidth = slideWidth + slideMarginRight;
-        const slidesVisible = Math.floor(window.innerWidth / totalSlideWidth);
-        if (currentIndex < slides.length - slidesVisible) {
+        if (currentIndex < slides.length - 1) {
             currentIndex++;
             updateSliderPosition();
         }
@@ -60,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    nextButton.addEventListener('click', showNextSlide);
-    prevButton.addEventListener('click', showPrevSlide);
+    downButton.addEventListener('click', showNextSlide);
+    upButton.addEventListener('click', showPrevSlide);
 
     // Lightbox functionality with Title and Description
     const lightbox = document.getElementById('lightbox');
@@ -76,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             lightbox.style.display = 'block';
             lightboxImg.src = this.src;
-            lightboxTitle.textContent = this.getAttribute('data-title');
-            lightboxDescription.textContent = this.getAttribute('data-description');
+            lightboxTitle.textContent = this.getAttribute('data-title') || '';
+            lightboxDescription.textContent = this.getAttribute('data-description') || '';
         });
     });
 
@@ -91,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialize slider position
-    updateSliderPosition();
-
     // Recalculate slider position on window resize
     window.addEventListener('resize', updateSliderPosition);
+
+    // Initialize slider position
+    updateSliderPosition();
 });
