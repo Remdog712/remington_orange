@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Images stored in JavaScript
     const images = [
         { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_2135.jpg', title: 'Image 2', description: 'A beautiful sunset', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3126.jpg', title: 'Image 3', description: 'A rugged mountain view', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_0425.jpg', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3623.jpg', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3160.jpg', title: 'Image 6', description: 'A misty forest', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_1944.jpg', title: 'Image 7', description: 'An abandoned city', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_0360.jpg', title: 'Image 8', description: 'Golden hour', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3193.jpg', title: 'Image 9', description: 'A peaceful stream', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_2707.jpg', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
+        { src: 'WixMedia/Photography/IMG_2135.JPG', title: 'Image 2', description: 'A beautiful sunset', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3126.JPG', title: 'Image 3', description: 'A rugged mountain view', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_0425.JPG', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3623.JPG', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3160.JPG', title: 'Image 6', description: 'A misty forest', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_1944.JPG', title: 'Image 7', description: 'An abandoned city', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_0360.JPG', title: 'Image 8', description: 'Golden hour', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3193.JPG', title: 'Image 9', description: 'A peaceful stream', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_2707.JPG', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
     ];
 
     // Randomize images
