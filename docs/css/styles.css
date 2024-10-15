@@ -7,9 +7,6 @@ body {
     padding: 0;
     letter-spacing: 0.05em;
     line-height: 1.6;
-    background-image: url('rugged-texture.png');
-    background-size: cover;
-    background-repeat: repeat;
     overflow-x: hidden;
     text-transform: uppercase; /* Apply uppercase globally */
 }

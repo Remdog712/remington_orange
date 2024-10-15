@@ -2,14 +2,11 @@
 body {
     font-family: 'League Spartan', sans-serif;
     color: #2C2C2C;
-    background-color: #F5F5F0;
+    background-color: #ffffe8;
     margin: 0;
     padding: 0;
     letter-spacing: 0.05em;
     line-height: 1.6;
-    background-image: url('rugged-texture.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     overflow-x: hidden;
     text-transform: uppercase;
 }
@@ -20,7 +17,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(245, 245, 240, 0.95);
+    background-color: #ffffe8;
     z-index: 100;
     text-align: center;
     padding: 10px 0;
