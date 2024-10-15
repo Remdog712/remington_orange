@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Images stored in JavaScript
     const images = [
-        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_2135.JPG', title: 'Image 2', description: 'A beautiful sunset', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3126.JPG', title: 'Image 3', description: 'A rugged mountain view', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_0425.JPG', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3623.JPG', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3160.JPG', title: 'Image 6', description: 'A misty forest', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_1944.JPG', title: 'Image 7', description: 'An abandoned city', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_0360.JPG', title: 'Image 8', description: 'Golden hour', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3193.JPG', title: 'Image 9', description: 'A peaceful stream', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_2707.JPG', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
+        { src: '../WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_2135.JPG', title: 'Image 2', description: 'A beautiful sunset', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_3126.JPG', title: 'Image 3', description: 'A rugged mountain view', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_0425.JPG', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_3623.JPG', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_3160.JPG', title: 'Image 6', description: 'A misty forest', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_1944.JPG', title: 'Image 7', description: 'An abandoned city', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_0360.JPG', title: 'Image 8', description: 'Golden hour', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_3193.JPG', title: 'Image 9', description: 'A peaceful stream', category: 'photography' },
+        { src: '../WixMedia/Photography/IMG_2707.JPG', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
     ];
 
     // Randomize images
@@ -53,25 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageCollage = document.getElementById('image-collage');
 
     shuffledImages.forEach(image => {
+        console.log(image.src); // Log the image src to the console
         const imageItem = document.createElement('div');
         imageItem.classList.add('image-item');
         imageItem.setAttribute('data-category', image.category);
-
+    
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.title;
         img.setAttribute('data-title', image.title);
         img.setAttribute('data-description', image.description);
-
+    
         // Attach click event to open lightbox
         img.addEventListener('click', () => {
             openLightbox(img.src, image.title, image.description);
         });
-
+    
         imageItem.appendChild(img);
         imageCollage.appendChild(imageItem);
     });
-
     // Lightbox Variables
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
