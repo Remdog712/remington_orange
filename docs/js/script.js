@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Images stored in JavaScript
     const images = [
         { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 2', description: 'A serene landscape', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 3', description: 'A serene landscape', category: 'photography' },
         { src: 'WixMedia/Photography/IMG_0425.JPG', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
         { src: 'WixMedia/Photography/IMG_3623.JPG', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
         { src: 'WixMedia/Photography/IMG_3160.JPG', title: 'Image 6', description: 'A misty forest', category: 'photography' },
@@ -49,28 +49,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const shuffledImages = shuffle(images);
 
-    // Load images into the collage
-    const imageCollage = document.getElementById('image-collage');
+];
 
-    shuffledImages.forEach(image => {
-        console.log(image.src); // Log the image src to the console
-        const imageItem = document.createElement('div');
-        imageItem.classList.add('image-item');
-        imageItem.setAttribute('data-category', image.category);
-    
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.title;
-        img.setAttribute('data-title', image.title);
-        img.setAttribute('data-description', image.description);
-    
-        // Attach click event to open lightbox
-        img.addEventListener('click', () => {
-            openLightbox(img.src, image.title, image.description);
+// Randomize images
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
+
+const shuffledImages = shuffle(images);
+
+// Load images into the collage
+const imageCollage = document.getElementById('image-collage');
+const imagesToLoad = [];
+
+shuffledImages.forEach(image => {
+    console.log(image.src);
+    const imageItem = document.createElement('div');
+    imageItem.classList.add('image-item');
+    imageItem.setAttribute('data-category', image.category);
+
+    const img = document.createElement('img');
+    img.dataset.src = image.src; // Use data-src for lazy loading
+    img.alt = image.title;
+    img.setAttribute('data-title', image.title);
+    img.setAttribute('data-description', image.description);
+
+    // Error handling
+    img.addEventListener('error', () => {
+        console.error(`Failed to load image: ${img.dataset.src}`);
+    });
+
+    // Click event for lightbox
+    img.addEventListener('click', () => {
+        openLightbox(img.dataset.src, image.title, image.description);
+    });
+
+    imageItem.appendChild(img);
+    imageCollage.appendChild(imageItem);
+
+    imagesToLoad.push(img);
+});
+
+// Implement Intersection Observer
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
         });
-    
-        imageItem.appendChild(img);
-        imageCollage.appendChild(imageItem);
+    });
+
+    imagesToLoad.forEach(img => {
+        imageObserver.observe(img);
+    });
+} else {
+    // Fallback for older browsers
+    imagesToLoad.forEach(img => {
+        img.src = img.dataset.src;
+    });
+}
     });
     // Lightbox Variables
     const lightbox = document.getElementById('lightbox');
