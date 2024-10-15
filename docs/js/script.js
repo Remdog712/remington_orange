@@ -30,27 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'WixMedia/Photography/IMG_2707.JPG', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
     ];
 
-    // Randomize images
-    function shuffle(array) {
-        let currentIndex = array.length, randomIndex;
-
-        // While there remain elements to shuffle.
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-
-            // And swap it with the current element.
-            [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]];
-        }
-
-        return array;
-    }
-
-    const shuffledImages = shuffle(images);
-
-];
-
 // Randomize images
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
