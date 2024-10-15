@@ -5,166 +5,133 @@
     <meta charset="UTF-8">
     <title>Remington Orange Portfolio</title>
     <link rel="stylesheet" href="css/portfolio.css">
-    <!-- Include Font Awesome for icons (for arrows) -->
+    <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
     <!-- Include Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
-            </a>
-            <h1><a href="index.html"><span class="dark-grey">Remington</span> <span class="orange">Orange</span></a></h1>
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Enlarged Orange Logo -->
+                    <img src="WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                    <!-- NameLogo enlarged -->
+                    <img src="WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+                </a>
+            </div>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html">Projects</a></li>
+                    <li><a href="about.html">About + Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About + Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Page Title -->
-    <h1 class="page-title">Portfolio</h1>
-
-    <!-- Photography Section -->
-    <h2 class="section-title">Photography</h2>
-    <div class="gallery-container">
-        <div class="gallery-wrapper" id="photoGallery">
-            <!-- Images will be dynamically loaded via JavaScript -->
-        </div>
-        <!-- Navigation buttons for Photography -->
-        <div class="gallery-nav">
-            <button id="prevBtn" disabled><i class="fas fa-arrow-left"></i></button>
-            <button id="nextBtn"><i class="fas fa-arrow-right"></i></button>
-        </div>
-    </div>
-
-    <!-- 3D Renders Section -->
-    <h2 class="section-title">3D Works</h2>
-    <div class="gallery-container">
-        <div class="gallery-wrapper" id="renderGallery">
-            <!-- Images will be dynamically loaded via JavaScript -->
-        </div>
-        <!-- Navigation buttons for 3D Renders -->
-        <div class="gallery-nav">
-            <button id="prevRenderBtn" disabled><i class="fas fa-arrow-left"></i></button>
-            <button id="nextRenderBtn"><i class="fas fa-arrow-right"></i></button>
-        </div>
-    </div>
-
-    <!-- Lightbox for Enlarged Images -->
-    <div id="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
-    </div>
-
-    <br>
-
-    <!-- Section Title -->
-    <h2 class="section-title">Projects</h2>
-
-    <!-- Filter Buttons -->
-    <div class="filter-buttons">
-        <button class="button active" data-filter="all">All</button>
-        <button class="button" data-filter="academic">Academic</button>
-        <button class="button" data-filter="personal">Personal</button>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Page Title -->
+        <h1 class="page-title">Projects</h1>
 
 <!-- Portfolio Grid -->
 <div class="portfolio-grid">
-    <!-- Portfolio Item 1 -->
-    <div class="portfolio-item" data-category="academic">
-        <a href="project_pages/RoutineRust.html">
-            <img src="WixMedia/Projects/RustRoutine/FactoBot1.jpg" alt="Routine Rust" loading="lazy">
-            <div class="overlay">
-                <h3>Routine Rust</h3>
-                <p>When robots are too efficient</p>
-            </div>
-        </a>
+    <!-- Left Column -->
+    <div class="portfolio-column">
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item">
+            <a href="project_pages/RoutineRust.html">
+                <img src="WixMedia/Projects/RustRoutine/FactoBot1.jpg" alt="Routine Rust">
+                <div class="overlay">
+                    <h3>Routine Rust</h3>
+                    <p>When robots are too efficient</p>
+                </div>
+            </a>
+        </div>
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item">
+            <a href="project_pages/LampLight.html">
+                <img src="WixMedia/Projects/Lamplight/LampLightLogo.jpg" alt="Lamplight">
+                <div class="overlay">
+                    <h3>Lamplight</h3>
+                    <p>A Game About Flashlights</p>
+                </div>
+            </a>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item">
+            <a href="project_pages/PhotoEssay.html">
+                <img src="WixMedia/Projects/Photo202/redux/Truck_HeroImage.jpg" alt="Nature Reclaims">
+                <div class="overlay">
+                    <h3>Nature Reclaims</h3>
+                    <p>A Photo Essay</p>
+                </div>
+            </a>
+        </div>
+        <!-- Portfolio Item 4 -->
+        <div class="portfolio-item">
+            <a href="project_pages/Athena.html">
+                <img src="WixMedia/Projects/Athena/743A7988.jpg" alt="Athena">
+                <div class="overlay">
+                    <h3>Athena Erie</h3>
+                    <p>Big Smiles Everyone!</p>
+                </div>
+            </a>
+        </div>
     </div>
-    <!-- Portfolio Item 2 -->
-    <div class="portfolio-item" data-category="academic">
-        <a href="project_pages/LampLight.html">
-            <img src="WixMedia/Projects/Lamplight/LampLightLogo.jpg" alt="Lamplight" loading="lazy">
-            <div class="overlay">
-                <h3>Lamplight</h3>
-                <p>A Game about flashlights.</p>
-            </div>
-        </a>
+    <!-- Right Column -->
+    <div class="portfolio-column">
+        <!-- Portfolio Item 5 -->
+        <div class="portfolio-item">
+            <a href="project_pages/PandoAmerica.html">
+                <img src="WixMedia/Projects/Game180World/DeerAlien.jpg" alt="PandoAmerica">
+                <div class="overlay">
+                    <h3>PandoAmerica</h3>
+                    <p>Alien Worlds Are Cool</p>
+                </div>
+            </a>
+        </div>
+        <!-- Portfolio Item 6 -->
+        <div class="portfolio-item">
+            <a href="project_pages/ThenThereWereFew.html">
+                <img src="WixMedia/Projects/ProcCrowd/ProceduralCrowd.jpg" alt="Then There Were Few">
+                <div class="overlay">
+                    <h3>Then There Were Few</h3>
+                    <p>MMMM. BRAINS!</p>
+                </div>
+            </a>
+        </div>
+        <!-- Portfolio Item 7 -->
+        <div class="portfolio-item">
+            <a href="project_pages/VARLab.html">
+                <img src="WixMedia/Projects/VAR/VARLabProfilePictureV1.jpg" alt="VAR Lab">
+                <div class="overlay">
+                    <h3>VAR Lab</h3>
+                    <p>Virtually Awesome</p>
+                </div>
+            </a>
+        </div>
+        <!-- Portfolio Item 8 -->
+        <div class="portfolio-item">
+            <a href="project_pages/Wesleyville.html">
+                <img src="WixMedia/Projects/Wesleyville/WesleyvilleFlag_Circle_Icon.jpg" alt="Wesleyville">
+                <div class="overlay">
+                    <h3>Wesleyville</h3>
+                    <p>Bringing In The New</p>
+                </div>
+            </a>
+        </div>
     </div>
-    <!-- Portfolio Item 3 -->
-    <div class="portfolio-item" data-category="academic">
-        <a href="project_pages/VARLab.html">
-            <img src="WixMedia/Projects/VAR/VARLabProfilePictureV1.jpg" alt="VAR Lab" loading="lazy">
-            <div class="overlay">
-                <h3>VAR Lab</h3>
-                <p>Making Everything Immersive</p>
-            </div>
-        </a>
-    </div>
-    <!-- Portfolio Item 4 -->
-    <div class="portfolio-item" data-category="academic">
-        <a href="project_pages/PandoAmerica.html">
-            <img src="WixMedia/Projects/Game180World/DeerAlien.jpg" alt="PandoAmerica" loading="lazy">
-            <div class="overlay">
-                <h3>PandoAmerica</h3>
-                <p>How very strange</p>
-            </div>
-        </a>
-    </div>
-    <!-- Portfolio Item 5 -->
-    <div class="portfolio-item" data-category="personal">
-        <a href="project_pages/PhotoEssay.html">
-            <img src="WixMedia/Projects/Photo202/IMG_2140.JPG" alt="Photo Essay" loading="lazy">
-            <div class="overlay">
-                <h3>Photo Essay</h3>
-                <p>As nature reclaims...</p>
-            </div>
-        </a>
-    </div>
-    <!-- Portfolio Item 6 -->
-    <div class="portfolio-item" data-category="academic">
-        <a href="project_pages/ThenThereWereFew.html">
-            <img src="WixMedia/Projects/ProcCrowd/ProceduralCrowd.jpg" alt="Then There Were Few" loading="lazy">
-            <div class="overlay">
-                <h3>Then There Were Few</h3>
-                <p>Brains!</p>
-            </div>
-        </a>
-    </div>
-    <!-- Portfolio Item 7 -->
-    <div class="portfolio-item" data-category="personal">
-        <a href="project_pages/Wesleyville.html">
-            <img src="WixMedia/Projects/Wesleyville/WesleyvilleFlag_Circle_Icon.jpg" alt="Wesleyville Borough Graphics" loading="lazy">
-            <div class="overlay">
-                <h3>Wesleyville Borough Graphics</h3>
-                <p>Out With The Old, In With The New!</p>
-            </div>
-        </a>
-    </div>
-    <!-- Portfolio Item 8 -->
-    <div class="portfolio-item" data-category="personal">
-        <a href="project_pages/Athena.html">
-            <img src="WixMedia/Projects/Athena/743A7988.jpg" alt="Athena Erie" loading="lazy">
-            <div class="overlay">
-                <h3>Athena Erie</h3>
-                <p>Say Cheese!</p>
-            </div>
-        </a>
-    </div>
-    <!-- Add more portfolio items as needed -->
 </div>
-
-    <!-- Footer -->
-    <footer>
-        <!-- Footer content if any -->
-    </footer>
+                <!-- Add more project items as needed -->
+            </div>
+        </div>
+    </main>
 
     <!-- JavaScript -->
     <script src="js/portfolio.js"></script>

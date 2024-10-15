@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     color: #2C2C2C;
     background-color: #F5F5F0;
     margin: 0;
@@ -10,74 +10,65 @@ body {
     background-image: url('rugged-texture.png');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+    text-transform: uppercase; /* Apply uppercase globally */
 }
 
 /* Header Styling */
 header {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 15px 20px;
-    background-color: rgba(245, 245, 240, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: rgba(245, 245, 240, 0.95);
     z-index: 100;
-    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 0;
+    transition: top 0.3s; /* Smooth transition for hiding/revealing */
+}
+
+.header-hidden {
+    top: -200px; /* Adjust this value to match the header's height */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo-image {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.5s;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
 }
 
 .logo a:hover .logo-image {
     transform: rotate(360deg);
 }
 
-.logo h1 {
-    margin-left: 10px;
-    font-size: 1.8em;
-    font-weight: 700;
-    font-family: 'Courier New', monospace;
-    line-height: 1;
+.name-logo {
+    height: 150px;
+    margin-left: 15px;
 }
 
-.logo h1 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.dark-grey {
-    color: #4A4A4A;
-}
-
-.orange {
-    color: #D97742;
-}
-
-.logo h1 a:hover .dark-grey {
-    color: #D97742;
-}
-
-.logo h1 a:hover .orange {
-    color: #4A4A4A;
-}
-
-/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
+    gap: 20px;
+    margin: 10px 0;
     padding: 0;
 }
 
@@ -88,206 +79,79 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #4A4A4A;
-    text-transform: uppercase;
     font-weight: 300;
+    font-size: 1em;
 }
 
 nav ul li a:hover {
     color: #D97742;
 }
 
+/* Main Content */
+main {
+    padding-top: 220px; /* Adjusted for header */
+    padding-bottom: 60px;
+    margin: 0 40px; /* Increased side margins */
+}
+
+/* Page Title */
 .page-title {
     text-align: center;
-    font-size: 3.5em; /* Slightly increased font size */
-    color: #D97742; /* Same color */
-    margin-top: 80px; /* Adjusted margin for better spacing */
-    font-family: 'Courier New', monospace; /* Keeping the original font */
-    background-color: rgba(217, 119, 66, 0.1); /* Light, transparent background */
-    padding: 10px 0; /* Small padding for a subtle background effect */
-    border-bottom: 2px solid #D97742; /* Simple border at the bottom */
-    border-top: 20px solid #D97742; /* Simple border at the bottom */
-    letter-spacing: 1px; /* Slightly increased letter spacing for readability */
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.2em; /* Slightly reduced font size */
-    color: #D97742; /* Same color */
-    margin-top: 40px; /* Adjusted margin for better spacing */
-    font-family: 'Courier New', monospace; /* Keeping the original font */
-    background-color: rgba(217, 119, 66, 0.1); /* Subtle, transparent background */
-    padding: 8px 0; /* Small padding for subtle background effect */
-    border-bottom: 1px solid #D97742; /* Thin bottom border for subtle visual separation */
-    letter-spacing: 0.8px; /* Slightly increased letter spacing for clarity */
-}
-
-/* Gallery Styles */
-.gallery-container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-.gallery-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    justify-items: center;
-}
-
-.gallery-wrapper img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1; /* Square aspect ratio */
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery-wrapper img:hover {
-    transform: scale(1.05);
-}
-
-/* Navigation Buttons Styles */
-.gallery-nav button {
-    background-color: #D97742; /* Orange color */
-    border: none;
-    color: #fff; /* White text */
-    font-size: 2em;
-    cursor: pointer;
-    margin: 20px 10px; /* Adjust margins */
-    padding: 20px 40px; /* Adjust padding to make buttons larger */
-    transition: background-color 0.3s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; /* Rounded corners */
-}
-
-.gallery-nav button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    color: #fff;
-}
-
-.gallery-nav button:hover:not(:disabled) {
-    background-color: #bf6537; /* Darker orange on hover */
-}
-
-.gallery-nav button i {
-    color: inherit;
-}
-
-/* Lightbox Styles */
-#lightbox {
-    display: none;
-    position: fixed;
-    z-index: 200;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    align-items: center;
-    justify-content: center;
-}
-
-#lightbox .lightbox-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-#lightbox-img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 90vh;
-    display: block;
-    margin: 0 auto;
-}
-
-#lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #F5F5F0;
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Filter Buttons */
-.filter-buttons {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.filter-buttons .button {
-    padding: 10px 20px;
-    background-color: #D97742;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1em;
-    font-weight: 300;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border: none;
-}
-
-.filter-buttons .button:hover,
-.filter-buttons .button.active {
-    background-color: #E39361;
+    font-size: 3em;
+    color: #D97742;
+    margin-bottom: 30px;
 }
 
 /* Portfolio Grid */
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted for smaller thumbnails */
-    gap: 10px; /* Reduced gap for tighter layout */
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Adjust gap between columns as needed */
     max-width: 1200px;
-    margin: 0 auto 50px;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
+/* Portfolio Column */
+.portfolio-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between portfolio items */
+}
+
+/* Portfolio Item */
 .portfolio-item {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    width: 100%;
-    padding-top: 100%; /* Square aspect ratio */
-    background-color: #f0f0f0; /* Placeholder background color */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
+/* Adjust image styling as needed */
 .portfolio-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images fill the container without distortion */
+    height: auto;
+    object-fit: cover;
     transition: transform 0.3s;
 }
 
+/* Hover effects */
 .portfolio-item:hover img {
     transform: scale(1.05);
 }
 
-/* Adjust the overlay to fit smaller thumbnails */
 .portfolio-item .overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 5px; /* Reduced padding */
+    padding: 15px;
     background: rgba(76, 76, 76, 0.8);
     color: #fff;
     transform: translateY(100%);
     transition: transform 0.3s;
-    font-size: 0.8em; /* Adjusted font size */
+    text-align: center;
 }
 
 .portfolio-item:hover .overlay {
@@ -295,38 +159,69 @@ nav ul li a:hover {
 }
 
 .portfolio-item .overlay h3 {
-    margin: 0 0 3px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em; /* Adjusted font size */
+    margin: 0 0 5px;
+    font-family: 'League Spartan', sans-serif;
 }
 
 .portfolio-item .overlay p {
     margin: 0;
-    font-size: 0.9em; /* Adjusted font size */
+    font-size: 0.9em;
 }
 
-/* Footer */
-footer {
-    padding: 20px;
-    background-color: #4A4A4A;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    position: relative;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .gallery-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .portfolio-grid {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .gallery-nav button {
-        font-size: 1.5em;
-        padding: 15px 30px;
+    .portfolio-column {
+        width: 100%;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .name-logo {
+        height: 130px;
+    }
+
+    .logo-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    main {
+        padding-top: 190px; /* Adjusted for mobile header */
+    }
+
+    .page-title {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .page-title {
+        font-size: 2em;
+    }
+
+    .portfolio-item .overlay h3,
+    .portfolio-item .overlay p {
+        font-size: 0.9em;
     }
 
     .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Further adjustments for small screens */
+        margin: 0 10px;
     }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+}
 }

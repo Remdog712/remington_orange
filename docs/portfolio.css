@@ -1,8 +1,6 @@
-/* portfolio.css */
-
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'League Spartan', sans-serif;
     color: #2C2C2C;
     background-color: #F5F5F0;
     margin: 0;
@@ -12,74 +10,59 @@ body {
     background-image: url('rugged-texture.png');
     background-size: cover;
     background-repeat: no-repeat;
+    text-transform: uppercase; /* Apply uppercase globally */
 }
 
 /* Header Styling */
 header {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 15px 20px;
-    background-color: rgba(245, 245, 240, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: rgba(245, 245, 240, 0.95);
     z-index: 100;
-    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo-image {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.5s;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
 }
 
 .logo a:hover .logo-image {
     transform: rotate(360deg);
 }
 
-.logo h1 {
-    margin-left: 10px;
-    font-size: 1.8em;
-    font-weight: 700;
-    font-family: 'Courier New', monospace;
-    line-height: 1;
+.name-logo {
+    height: 150px;
+    margin-left: 15px;
 }
 
-.logo h1 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.dark-grey {
-    color: #4A4A4A;
-}
-
-.orange {
-    color: #D97742;
-}
-
-.logo h1 a:hover .dark-grey {
-    color: #D97742;
-}
-
-.logo h1 a:hover .orange {
-    color: #4A4A4A;
-}
-
-/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
+    gap: 20px;
+    margin: 10px 0;
     padding: 0;
 }
 
@@ -90,12 +73,19 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #4A4A4A;
-    text-transform: uppercase;
     font-weight: 300;
+    font-size: 1em;
 }
 
 nav ul li a:hover {
     color: #D97742;
+}
+
+/* Main Content */
+main {
+    padding-top: 220px;
+    padding-bottom: 60px;
+    margin: 0 40px;
 }
 
 /* Page Title */
@@ -103,49 +93,65 @@ nav ul li a:hover {
     text-align: center;
     font-size: 3em;
     color: #D97742;
-    margin-top: 150px;
-    font-family: 'Courier New', monospace;
+    margin-bottom: 30px;
 }
 
-/* Scrolling Image Gallery */
-.scrolling-gallery {
+/* Portfolio Grid */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    position: relative;
     overflow: hidden;
-    white-space: nowrap;
-    margin: 30px 0;
-}
-
-.scrolling-gallery img {
-    width: 200px; /* Increased size from 150px to 200px */
-    height: 200px; /* Set height to match width for consistent aspect ratio */
-    object-fit: cover; /* Ensure images fill the container without distortion */
-    display: inline-block;
-    transition: transform 0.3s;
     cursor: pointer;
-    margin: 0 5px;
+    width: calc(50% - 10px); /* Two items per row */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
-.scrolling-gallery img:hover {
-    transform: scale(1.1);
-    animation-play-state: paused;
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-/* Scrolling Animation */
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+.portfolio-item:hover img {
+    transform: scale(1.05);
 }
 
-.gallery-wrapper {
-    display: inline-block;
-    animation: scroll 30s linear infinite;
+.portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(76, 76, 76, 0.8);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    text-align: center;
 }
 
-.scrolling-gallery:hover .gallery-wrapper {
-    animation-play-state: paused;
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.portfolio-item .overlay h3 {
+    margin: 0 0 5px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.portfolio-item .overlay p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 /* Lightbox Styles */
@@ -158,11 +164,11 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
 }
 
 #lightbox .lightbox-content {
-    position: relative;
-    margin: 5% auto;
     max-width: 90%;
     max-height: 80%;
 }
@@ -174,7 +180,7 @@ nav ul li a:hover {
     max-height: 80vh;
     display: block;
     margin: 0 auto;
-    object-fit: contain; /* Maintain aspect ratio */
+    object-fit: contain;
 }
 
 #lightbox .close {
@@ -187,104 +193,17 @@ nav ul li a:hover {
     text-decoration: none;
     cursor: pointer;
 }
-/* Filter Buttons */
-.filter-buttons {
-    text-align: center;
-    margin: 30px 0;
-}
 
-.filter-buttons .button {
-    padding: 10px 20px;
-    background-color: #D97742;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1em;
-    font-weight: 300;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.filter-buttons .button:hover,
-.filter-buttons .button.active {
-    background-color: #E39361;
-}
-
-/* Section Title */
-.section-title {
-    text-align: center;
-    font-size: 2.5em;
-    color: #D97742;
-    margin-top: 50px;
-    font-family: 'Courier New', monospace;
-}
-
-/* Portfolio Grid */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 750px;
-    margin: 0 auto 50px;
-    padding: 0 20px;
-}
-
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    aspect-ratio: 1 / 1; /* Make the container square */
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image fills the container */
-    transition: transform 0.3s;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.05);
-}
-
-.portfolio-item .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    background: rgba(76, 76, 76, 0.8);
-    color: #fff;
-    transform: translateY(100%);
-    transition: transform 0.3s;
-}
-
-.portfolio-item:hover .overlay {
-    transform: translateY(0);
-}
-
-.portfolio-item .overlay h3 {
-    margin: 0 0 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.portfolio-item .overlay p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-/* Footer */
-footer {
-    padding: 20px;
-    background-color: #4A4A4A;
+#lightbox-caption {
     color: #fff;
     text-align: center;
-    width: 100%;
+    margin-top: 15px;
+    font-size: 1.2em;
 }
 
 /* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    .portfolio-item {
+        width: 100%;
     }
 }

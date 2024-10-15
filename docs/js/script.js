@@ -1,91 +1,147 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Dropdown functionality
-    const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+    // Header Hide/Reveal on Scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('main-header');
 
-    dropdownButtons.forEach((button) => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const li = this.closest('li');
-            li.classList.toggle('active');
-            // Close other dropdowns
-            dropdownButtons.forEach((btn) => {
-                if (btn !== this) {
-                    btn.closest('li').classList.remove('active');
-                }
-            });
-        });
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scroll Down - hide header
+            header.classList.add('header-hidden');
+        } else {
+            // Scroll Up - show header
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.matches('.dropdown-btn') && !e.target.closest('.dropdown-content')) {
-            document.querySelectorAll('.professions li').forEach((li) => {
-                li.classList.remove('active');
-            });
-        }
-    });
+    // Images stored in JavaScript
+    const images = [
+        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_2135.jpg', title: 'Image 2', description: 'A beautiful sunset', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3126.jpg', title: 'Image 3', description: 'A rugged mountain view', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_0425.jpg', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3623.jpg', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3160.jpg', title: 'Image 6', description: 'A misty forest', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_1944.jpg', title: 'Image 7', description: 'An abandoned city', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_0360.jpg', title: 'Image 8', description: 'Golden hour', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_3193.jpg', title: 'Image 9', description: 'A peaceful stream', category: 'photography' },
+        { src: 'WixMedia/Photography/IMG_2707.jpg', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
+    ];
 
-    // Vertical Slider functionality
-    const slider = document.querySelector('.vertical-slider');
-    const slides = document.querySelectorAll('.vertical-slider .slide');
-    const upButton = document.querySelector('.slider-nav.up');
-    const downButton = document.querySelector('.slider-nav.down');
-    let currentIndex = 0;
+    // Randomize images
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
 
-    function updateSliderPosition() {
-        const slideHeight = slides[0].offsetHeight;
-        slider.style.transform = `translateY(-${currentIndex * slideHeight}px)`;
-    }
-
-    function showNextSlide() {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            updateSliderPosition();
-        }
-    }
-
-    function showPrevSlide() {
-        if (currentIndex > 0) {
+        // While there remain elements to shuffle.
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
-            updateSliderPosition();
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
         }
+
+        return array;
     }
 
-    downButton.addEventListener('click', showNextSlide);
-    upButton.addEventListener('click', showPrevSlide);
+    const shuffledImages = shuffle(images);
 
-    // Lightbox functionality with Title and Description
+    // Load images into the collage
+    const imageCollage = document.getElementById('image-collage');
+
+    shuffledImages.forEach(image => {
+        const imageItem = document.createElement('div');
+        imageItem.classList.add('image-item');
+        imageItem.setAttribute('data-category', image.category);
+
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.alt = image.title;
+        img.setAttribute('data-title', image.title);
+        img.setAttribute('data-description', image.description);
+
+        // Attach click event to open lightbox
+        img.addEventListener('click', () => {
+            openLightbox(img.src, image.title, image.description);
+        });
+
+        imageItem.appendChild(img);
+        imageCollage.appendChild(imageItem);
+    });
+
+    // Lightbox Variables
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxDescription = document.getElementById('lightbox-description');
-    const closeBtn = document.querySelector('#lightbox .close');
-    const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.querySelector('#lightbox .close');
 
-    lightboxTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            lightbox.style.display = 'block';
-            lightboxImg.src = this.src;
-            lightboxTitle.textContent = this.getAttribute('data-title') || '';
-            lightboxDescription.textContent = this.getAttribute('data-description') || '';
-        });
-    });
+    // Open Lightbox Function
+    function openLightbox(imgSrc, title, description) {
+        lightboxImg.src = imgSrc;
+        lightboxCaption.textContent = title + (description ? ` - ${description}` : '');
+        lightbox.style.display = 'flex';
+    }
 
-    closeBtn.addEventListener('click', function() {
+    // Close Lightbox when clicking on the close button
+    lightboxClose.addEventListener('click', () => {
         lightbox.style.display = 'none';
     });
 
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
+    // Close Lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === lightboxImg) {
             lightbox.style.display = 'none';
         }
     });
 
-    // Recalculate slider position on window resize
-    window.addEventListener('resize', updateSliderPosition);
+    // Filter Functionality
+    const filterButton = document.querySelector('.filter-button');
+    const filterDropdown = document.querySelector('.filter-dropdown');
+    const filterOptions = document.querySelectorAll('.filter-option');
 
-    // Initialize slider position
-    updateSliderPosition();
+    // Toggle filter menu on button click
+    filterButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent click from bubbling up
+        filterDropdown.classList.toggle('active');
+    });
+
+    // Close filter menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!filterDropdown.contains(e.target)) {
+            filterDropdown.classList.remove('active');
+        }
+    });
+
+    filterOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // Remove 'active' class from all options
+            filterOptions.forEach(opt => opt.classList.remove('active'));
+            // Add 'active' class to clicked option
+            option.classList.add('active');
+
+            const filterValue = option.getAttribute('data-filter');
+            filterImages(filterValue);
+
+            // Close the dropdown menu
+            filterDropdown.classList.remove('active');
+        });
+    });
+
+    function filterImages(category) {
+        const allImageItems = document.querySelectorAll('.image-item');
+        allImageItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+            if (category === 'all' || itemCategory === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Initialize filter to show all items
+    filterImages('all');
 });

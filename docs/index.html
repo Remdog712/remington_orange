@@ -4,140 +4,67 @@
     <link rel="icon" href="RO_Logo.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <title>Remington Orange Portfolio</title>
+    <!-- Include CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
     <!-- Include Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
-            </a>
-            <h1><a href="index.html"><span class="dark-grey">Remington</span> <span class="orange">Orange</span></a></h1>
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Enlarged Orange Logo -->
+                    <img src="WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                    <!-- NameLogo enlarged -->
+                    <img src="WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+                </a>
+            </div>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html">Projects</a></li>
+                    <li><a href="about.html">About + Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About + Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Content Wrapper -->
-        <div class="content-wrapper">
-            <!-- About Section -->
-            <section class="about-section" id="about">
-                <div class="about-content">
-                    <div class="about-img-container">
-                        <img src="WixMedia/Website/Me.JPG" alt="Remington Orange" class="about-img">
-                    </div>
-                    <h2>I'm a:</h2>
-                    <ul class="professions">
-                        <li>
-                            <span>3D Modeler</span>
-                            <button class="dropdown-btn">▼</button>
-                            <div class="dropdown-content">
-                                <p>Experience in creating and editing 3D models in Blender and texturing in Substance Painter</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Photographer</span>
-                            <button class="dropdown-btn">▼</button>
-                            <div class="dropdown-content">
-                                <p>For pleasure and capturing life's little moments.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Graphic Designer</span>
-                            <button class="dropdown-btn">▼</button>
-                            <div class="dropdown-content">
-                                <p>Experience in Illustrator and have made professional logos and graphics.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Game Developer</span>
-                            <button class="dropdown-btn">▼</button>
-                            <div class="dropdown-content">
-                                <p>Proficient in developing games using Unreal Engine.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <p>I’m passionate about creating in the digital space, driven by a mindset of efficiency and swift execution. I thrive on experimentation and am always eager to learn and grow in my craft.</p>
-                    <a href="about.html" class="button learn-more">Learn More <span class="arrow">→</span></a>
-                </div>
-            </section>
+        <!-- About Blurb -->
+        <div class="about-blurb">
+            <p>Welcome! I'm Remington Orange, a passionate photographer and 3D artist. Explore my work below.</p>
+        </div>
 
-            <!-- Sample Work Section -->
-            <section class="sample-work-section">
-                <h2 class="section-heading">Sample Work</h2>
-                <!-- Vertical Image Slider -->
-                <div class="vertical-slider-container">
-                    <div class="vertical-slider">
-                        <!-- Slide 1 -->
-                        <div class="slide">
-                            <img src="WixMedia/Photography/IMG_3287.JPG" alt="Project Image 1" class="lightbox-trigger">
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="slide">
-                            <img src="WixMedia/Renders/OrangeO_Cereal.jpg" alt="Project Image 2" class="lightbox-trigger">
-                        </div>
-                        <!-- Add more slides as needed -->
-                        <!-- Slide 3 -->
-                        <div class="slide">
-                            <img src="WixMedia/Photography/IMG_0425.JPG" alt="Project Image 3" class="lightbox-trigger">
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="slide">
-                            <img src="WixMedia/Renders/LivingRoomProgress.jpg" alt="Project Image 4" class="lightbox-trigger">
-                        </div>
-                        <!-- Slide 5 -->
-                        <div class="slide">
-                            <img src="WixMedia/Photography/IMG_2111.JPG" alt="Project Image 5" class="lightbox-trigger">
-                        </div>
-                    </div>
-                    <!-- Slider Navigation -->
-                    <button class="slider-nav up">&#9650;</button>
-                    <button class="slider-nav down">&#9660;</button>
+        <!-- Filter Dropdown -->
+        <div class="filter-container">
+            <div class="filter-dropdown">
+                <button class="filter-button"><i class="fas fa-filter"></i> Filter <i class="fas fa-chevron-down"></i></button>
+                <div class="filter-menu">
+                    <button class="filter-option active" data-filter="all">All</button>
+                    <button class="filter-option" data-filter="3dworks">3D Works</button>
+                    <button class="filter-option" data-filter="photography">Photography</button>
                 </div>
-                <a href="portfolio.html" class="button full-portfolio">Full Portfolio <span class="arrow">→</span></a>
-            </section>
+            </div>
+        </div>
+
+        <!-- Image Collage -->
+        <div class="image-collage" id="image-collage">
+            <!-- Images will be loaded dynamically via JavaScript -->
         </div>
     </main>
 
-    <!-- Contact Section -->
-    <footer id="contact">
-        <div class="contact-info">
-            <a href="https://www.linkedin.com/in/remington-orange-38746b266/" target="_blank" class="contact-link">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Remdog712" target="_blank" class="contact-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:rmo5266@psu.edu" class="contact-link">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="tel:+8142278549" class="contact-link">
-                <i class="fas fa-phone"></i> Phone
-            </a>
-        </div>
-    </footer>
-
     <!-- Lightbox Modal -->
     <div id="lightbox">
-        <div class="lightbox-content">
-            <span class="close">&times;</span>
-            <h3 id="lightbox-title"></h3>
-            <img id="lightbox-img" alt="Expanded Image">
-            <p id="lightbox-description"></p>
-        </div>
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+        <div id="lightbox-caption"></div>
     </div>
 
     <!-- JavaScript -->

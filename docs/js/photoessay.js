@@ -1,42 +1,60 @@
-// JavaScript for changing background image as you scroll and lightbox functionality
+// Combined JavaScript for header hide/reveal, background image change on scroll, lightbox functionality, and thumbnail hover
 
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.essay-section');
-    const backgroundDiv = document.querySelector('.background-image');
+    // Header Hide/Reveal on Scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('main-header');
 
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5 // Adjust as needed
-    };
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    const observer = new IntersectionObserver(callback, options);
-
-    sections.forEach(section => {
-        observer.observe(section);
+        if (scrollTop > lastScrollTop) {
+            // Scroll Down - hide header
+            header.classList.add('header-hidden');
+        } else {
+            // Scroll Up - show header
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 
-    function callback(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const bgImage = entry.target.getAttribute('data-background-image');
-                backgroundDiv.style.backgroundImage = `url(${bgImage})`;
-            }
-        });
-    }
+   // Background Image Change on Scroll
+const sections = document.querySelectorAll('.essay-section');
+const backgroundDiv = document.querySelector('.background-image');
 
-    // Lightbox functionality
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Adjust as needed
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+function callback(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const bgImage = entry.target.getAttribute('data-background-image');
+            backgroundDiv.style.backgroundImage = `url(${bgImage})`;
+        }
+    });
+}
+
+    // Lightbox Functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxDescription = document.getElementById('lightbox-description');
     const closeBtn = document.querySelector('#lightbox .close');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryImages = document.querySelectorAll('.gallery-item img, .image-group img, .main-image img');
 
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
             lightbox.style.display = 'block';
             lightboxImg.src = this.src;
-            lightboxDescription.textContent = this.alt;
+            lightboxDescription.textContent = this.alt || '';
         });
     });
 
@@ -51,12 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Thumbnail hover functionality
+    // Thumbnail Hover Functionality
     const essaySections = document.querySelectorAll('.essay-section');
 
     essaySections.forEach(section => {
         const mainImage = section.querySelector('.main-image img');
-        const thumbnails = section.querySelectorAll('.thumbnail-group .thumbnail');
+        const thumbnails = section.querySelectorAll('.thumbnail-group img');
 
         thumbnails.forEach(thumbnail => {
             thumbnail.addEventListener('mouseover', function() {
@@ -74,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mainImage.addEventListener('click', function() {
             lightbox.style.display = 'block';
             lightboxImg.src = this.src;
-            lightboxDescription.textContent = this.alt;
+            lightboxDescription.textContent = this.alt || '';
         });
     });
 });

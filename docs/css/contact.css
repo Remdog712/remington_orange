@@ -11,7 +11,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Apply uppercase globally */
 }
 
 /* Header Styling */
@@ -50,8 +50,8 @@ header {
 }
 
 .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     transition: transform 0.3s;
 }
 
@@ -60,7 +60,7 @@ header {
 }
 
 .name-logo {
-    height: 130px;
+    height: 150px;
     margin-left: 15px;
 }
 
@@ -89,7 +89,7 @@ nav ul li a:hover {
 
 /* Main Content */
 main {
-    padding-top: 220px;
+    padding-top: 220px; /* Adjusted for header */
     padding-bottom: 60px;
     margin: 0 40px;
 }
@@ -97,122 +97,109 @@ main {
 /* Page Title */
 .page-title {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3em;
     color: #D97742;
     margin-bottom: 30px;
 }
 
-/* About Section */
+/* Contact Section */
 .about-section {
     text-align: center;
     padding: 50px 20px;
 }
 
-.about-blurb {
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Make the items stack vertically */
+    align-items: center; /* Center align the items */
+    gap: 30px; /* Space between contact items */
+    margin-top: 30px;
     max-width: 800px;
     margin: 0 auto;
-    font-size: 1.2em;
-    color: #4A4A4A;
-    line-height: 1.8;
 }
 
-/* Single Image Section */
-.image-container {
+.contact-item {
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.profile-image {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Resume Section */
-.resume-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.resume-section .section-heading {
-    font-size: 2em;
-    color: #D97742;
-    margin-bottom: 30px;
-}
-
-.resume-viewer {
-    width: 95%;
-    height: 600px;
-    margin: 0 auto;
-    border: 1px solid #D97742;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-}
-
-.resume-buttons {
-    margin-top: 20px;
-}
-
-.resume-buttons .button {
-    padding: 12px 24px;
-    background-color: #D97742;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
+    flex-direction: row; /* Display the icon and text side-by-side */
+    align-items: center;
     font-size: 1.2em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    gap: 15px; /* Space between icon and text */
 }
 
-.resume-buttons .button:hover {
-    background-color: #E39361;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.contact-item i {
+    color: #D97742; /* Orange color for icons */
+    transition: color 0.3s, transform 0.3s;
 }
 
-.resume-buttons .button:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+.contact-item a {
+    text-decoration: none;
+    color: #4A4A4A; /* Dark grey for text */
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #D97742; /* Orange hover effect */
+}
+
+.contact-item i:hover {
+    color: #E39361; /* Slightly lighter orange on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+h2 {
+    color: #D97742; /* Orange title */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 /* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
     .logo-image {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .name-logo {
         height: 100px;
     }
 
-    .profile-image {
-        width: 160px;
+    .contact-info {
+        gap: 20px;
     }
 
-    .resume-viewer {
-        height: 500px;
+    h2 {
+        font-size: 2em; /* Smaller title for mobile */
+    }
+
+    .contact-item {
+        font-size: 1.1em; /* Slightly smaller text on mobile */
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .profile-image {
-        width: 140px;
+    .contact-item {
+        font-size: 1em;
+        gap: 10px; /* Adjust gap between icon and text on smaller screens */
     }
 
-    .resume-viewer {
-        height: 450px;
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .name-logo {
+        height: 80px;
     }
 
     h2 {
         font-size: 1.8em;
+    }
+
+    .contact-item i {
+        font-size: 1.5em; /* Reduce icon size */
+    }
+
+    .contact-item a {
+        font-size: 0.9em; /* Reduce link size */
     }
 }

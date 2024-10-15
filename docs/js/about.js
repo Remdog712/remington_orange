@@ -1,4 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    // Header Hide/Reveal on Scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('main-header');
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scroll Down - hide header
+            header.classList.add('header-hidden');
+        } else {
+            // Scroll Up - show header
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
+
     // Image Stack Functionality
     const images = [
         { id: 'image1', title: 'This is me!' },
@@ -24,17 +41,5 @@ document.addEventListener('DOMContentLoaded', function() {
         nextImage.classList.add('visible');
 
         imageTitle.textContent = images[currentImageIndex].title;
-    });
-
-    // Easy Reader Toggle Functionality
-    const easyReaderToggle = document.getElementById('easyReaderToggle');
-    const resumeFrame = document.getElementById('resumeFrame');
-
-    easyReaderToggle.addEventListener('change', function() {
-        if (easyReaderToggle.checked) {
-            resumeFrame.src = 'Wixmedia/RemingtonOrangeEasyReadResume.pdf'; // Replace with your easy reader document
-        } else {
-            resumeFrame.src = 'Wixmedia/RemingtonOrangeResume.pdf'; // Original resume document
-        }
     });
 });
