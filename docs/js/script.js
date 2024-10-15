@@ -16,98 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 
-    // Images stored in JavaScript
-    const images = [
-        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 1', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 2', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3287.JPG', title: 'Image 3', description: 'A serene landscape', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_0425.JPG', title: 'Image 4', description: 'A quiet lake', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3623.JPG', title: 'Image 5', description: 'Nature in bloom', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3160.JPG', title: 'Image 6', description: 'A misty forest', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_1944.JPG', title: 'Image 7', description: 'An abandoned city', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_0360.JPG', title: 'Image 8', description: 'Golden hour', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_3193.JPG', title: 'Image 9', description: 'A peaceful stream', category: 'photography' },
-        { src: 'WixMedia/Photography/IMG_2707.JPG', title: 'Image 10', description: 'A vibrant flower field', category: 'photography' }
-    ];
-
-// Randomize images
-function shuffle(array) {
-    let currentIndex = array.length, randomIndex;
-
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-    }
-
-    return array;
-}
-
-const shuffledImages = shuffle(images);
-
-// Load images into the collage
-const imageCollage = document.getElementById('image-collage');
-const imagesToLoad = [];
-
-shuffledImages.forEach(image => {
-    console.log(image.src);
-    const imageItem = document.createElement('div');
-    imageItem.classList.add('image-item');
-    imageItem.setAttribute('data-category', image.category);
-
-    const img = document.createElement('img');
-    img.dataset.src = image.src; // Use data-src for lazy loading
-    img.alt = image.title;
-    img.setAttribute('data-title', image.title);
-    img.setAttribute('data-description', image.description);
-
-    // Error handling
-    img.addEventListener('error', () => {
-        console.error(`Failed to load image: ${img.dataset.src}`);
-    });
-
-    // Click event for lightbox
-    img.addEventListener('click', () => {
-        openLightbox(img.dataset.src, image.title, image.description);
-    });
-
-    imageItem.appendChild(img);
-    imageCollage.appendChild(imageItem);
-
-    imagesToLoad.push(img);
-});
-
-// Implement Intersection Observer
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    imagesToLoad.forEach(img => {
-        imageObserver.observe(img);
-    });
-} else {
-    // Fallback for older browsers
-    imagesToLoad.forEach(img => {
-        img.src = img.dataset.src;
-    });
-}
-    });
     // Lightbox Variables
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('#lightbox .close');
 
-    // Open Lightbox Function
+    // Function to open the lightbox
     function openLightbox(imgSrc, title, description) {
         lightboxImg.src = imgSrc;
         lightboxCaption.textContent = title + (description ? ` - ${description}` : '');
@@ -124,6 +39,17 @@ if ('IntersectionObserver' in window) {
         if (e.target === lightbox || e.target === lightboxImg) {
             lightbox.style.display = 'none';
         }
+    });
+
+    // Attach click event to all images for the lightbox
+    const imageItems = document.querySelectorAll('.image-item img');
+    imageItems.forEach(img => {
+        img.addEventListener('click', () => {
+            const imgSrc = img.src;
+            const title = img.getAttribute('data-title');
+            const description = img.getAttribute('data-description');
+            openLightbox(imgSrc, title, description);
+        });
     });
 
     // Filter Functionality
