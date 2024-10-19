@@ -96,9 +96,11 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    font-family: Arial, sans-serif; /* Keep Arial font */
+    font-family: 'Ariel', sans-serif; /* Keep Arial font */
     text-transform: none; /* Ensure content text is not uppercase */
+    font-weight: bold; /* Make text bold */
 }
+
 
 /* Description Text Styling */
 .description p,

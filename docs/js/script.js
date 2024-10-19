@@ -41,13 +41,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Image Randomization Starts Here ---
+
+    /**
+     * Shuffles an array in place using the Fisher-Yates algorithm.
+     * @param {Array} array - The array to shuffle.
+     * @returns {Array} The shuffled array.
+     */
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            // Swap elements array[i] and array[j]
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Select the image container
+    const imageContainer = document.getElementById('image-collage');
+
+    if (imageContainer) {
+        // Select all image items within the container
+        const imageItems = Array.from(imageContainer.children);
+
+        // Shuffle the image items
+        const shuffledItems = shuffleArray(imageItems);
+
+        // Re-append shuffled items to the container without removing them from the DOM
+        shuffledItems.forEach(item => imageContainer.appendChild(item));
+    } else {
+        console.warn('Image container with id "#image-collage" not found.');
+    }
+
+    // --- Image Randomization Ends Here ---
+
     // Attach click event to all images for the lightbox
-    const imageItems = document.querySelectorAll('.image-item img');
-    imageItems.forEach(img => {
+    const imageElements = document.querySelectorAll('.image-item img');
+    imageElements.forEach(img => {
         img.addEventListener('click', () => {
             const imgSrc = img.src;
-            const title = img.getAttribute('data-title');
-            const description = img.getAttribute('data-description');
+            const title = img.getAttribute('data-title') || '';
+            const description = img.getAttribute('data-description') || '';
             openLightbox(imgSrc, title, description);
         });
     });
@@ -85,12 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /**
+     * Filters images based on the selected category.
+     * @param {string} category - The category to filter by.
+     */
     function filterImages(category) {
         const allImageItems = document.querySelectorAll('.image-item');
         allImageItems.forEach(item => {
             const itemCategory = item.getAttribute('data-category');
             if (category === 'all' || itemCategory === category) {
-                item.style.display = 'block';
+                item.style.display = ''; // Reset to default display
             } else {
                 item.style.display = 'none';
             }
