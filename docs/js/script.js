@@ -133,8 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
   { src: "WixMedia/Renders/boots1.png", category: "3dworks", title: "Boot Photogrammetry", description: "", alt: "3dworks 37" },
 
     // 3D Models
-{ src: "WixMedia/3DModels/ProjectCorpo_Pistol/Pistol.png", category: "3dmodels", title: "Project Corpo Pistol", description: "Pistol from Project Corpo Project", modelSrc: "WixMedia/3DModels/ProjectCorpo_Pistol/ProjectCorpo_Pistol.glb", alt: "Project Corpo Pistol" }
-    ];
+{ src: "WixMedia/3DModels/ProjectCorpo_Pistol/Pistol.png", category: "3dmodels", title: "Project Corpo Pistol", description: "Pistol from Project Corpo Project", modelSrc: "WixMedia/3DModels/ProjectCorpo_Pistol/ProjectCorpo_Pistol.glb", alt: "Project Corpo Pistol" },
+{ src: "WixMedia/3DModels/RollingChair/RollingChair.png", category: "3dmodels", title: "Rolling Chair", description: "Chair from Project Corpo Project", modelSrc: "WixMedia/3DModels/RollingChair/RollingChair.glb", alt: "RollingChair" },  
+{ src: "WixMedia/3DModels/ResearcherRobot/ResearcherRobot.png", category: "3dmodels", title: "Researcher Robot", description: "Researcher Robot from Project Corpo Project", modelSrc: "WixMedia/3DModels/ResearcherRobot/ResearcherRobot.glb", alt: "ResearcherRobot" },    
+{ src: "WixMedia/3DModels/SecurityCamera/SecurityCamera.jpg", category: "3dmodels", title: "Security Camera", description: "Security Camera Robot from Project Corpo Project", modelSrc: "WixMedia/3DModels/SecurityCamera/SecurityCamera.glb", alt: "SecurityCamera" },  
+];
 
   
 // 3. Render Collage
@@ -185,12 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let isWireframe = false;
 
     // 5. Open/Close Functions
-    function openLightbox(imgSrc, title, description) {
-        if (!lightbox) return;
-        lightboxImg.src = imgSrc;
-        lightboxCaption.textContent = title + (description ? ` - ${description}` : '');
-        lightbox.style.display = 'flex';
-    }
+function openLightbox(imgSrc, title, description) {
+    if (!lightbox) return;
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = title + (description ? ` - ${description}` : '');
+    lightbox.style.display = 'flex'; // This ensures the background covers the screen
+}
 
     function openModelbox(modelSrc, posterSrc, title, description) {
         if (!modelbox || !modelboxViewer) return;

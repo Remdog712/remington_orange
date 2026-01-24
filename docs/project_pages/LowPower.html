@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>DIGIT 220N Final – Low Power (CGI Short Film)</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Inline video styling -->
+    <style>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0 4rem 0;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 14px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 900px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                <img src="../WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../portfolio.html">Projects</a></li>
+                <li><a href="../about.html">About + Resume</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Back Button -->
+<div class="back-button">
+    <a href="../portfolio.html">&larr; Back to Projects</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <img src="../WixMedia/Projects/DIGIT220/LowPower2.png"
+         alt="Low Power CGI Short Film Still"
+         class="hero-image">
+    <div class="overlay">
+        <h1 class="project-title">Low Power – CGI Short Film</h1>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="content-section">
+    <div class="description">
+        <p>
+            For my <strong>DIGIT 220N</strong> final, I created a short film about a robot in search of energy.
+            This project is a <strong>CGI-driven short film</strong> that blends live-action footage I shot with
+            <strong>digital assets I created, animated, and rendered in Blender</strong>.
+        </p>
+
+        <p>
+            The focus of the project was integrating CGI into real footage by matching lighting, scale, camera motion,
+            and scene composition so the digital elements feel grounded within the environment.
+        </p>
+    </div>
+
+    <!-- Video Section -->
+    <h2 class="section-title">Film & Process Videos</h2>
+    <div class="video-grid">
+        <iframe
+            src="https://www.youtube.com/embed/tf7oeub9Nws"
+            title="Low Power – CGI Short Film"
+            allowfullscreen>
+        </iframe>
+
+        <iframe
+            src="https://www.youtube.com/embed/D8sfqlMeF44"
+            title="Low Power – Behind the Scenes / Process"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Gallery Section -->
+    <h2 class="section-title">Gallery from This Project</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="../WixMedia/Projects/DIGIT220/LowPower2.png"
+                 alt="Low Power Still 1"
+                 data-description="Film still featuring CGI integration over live-action footage">
+        </div>
+        <div class="gallery-item">
+            <img src="../WixMedia/Projects/DIGIT220/LowPower.jpg"
+                 alt="Low Power Still 2"
+                 data-description="Promotional still / key frame from the short film">
+        </div>
+        <div class="gallery-item">
+            <img src="../WixMedia/Projects/DIGIT220/LowPower3.png"
+                 alt="Low Power Still 3"
+                 data-description="Additional film still showing CGI elements created in Blender">
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+    <div class="lightbox-description" id="lightbox-description"></div>
+</div>
+
+<footer></footer>
+
+<script src="../js/project.js"></script>
+</body>
+</html>

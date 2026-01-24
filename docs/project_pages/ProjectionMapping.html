@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Projection Mapping – Multi-Surface + Floor Projection</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header id="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                <img src="../WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../portfolio.html">Projects</a></li>
+                <li><a href="../about.html">About + Resume</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Back Button -->
+<div class="back-button">
+    <a href="../portfolio.html">&larr; Back to Projects</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <img src="../WixMedia/Projects/ProjectionMapping/ProjectionMapping2.JPG"
+         alt="Projection Mapping Setup"
+         class="hero-image">
+    <div class="overlay">
+        <h1 class="project-title">Projection Mapping Systems</h1>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="content-section">
+    <div class="description">
+        <p>
+            This project includes two projection systems I set up for interactive and immersive displays. The first uses a
+            projector aimed at a set of <strong>four whiteboards</strong>, where content is
+            <strong>projection-mapped to a defined outline</strong>. This setup is used to display information or construct
+            “virtual window” scenes by precisely aligning imagery to the board layout.
+        </p>
+
+        <p>
+            The second system is a <strong>ceiling-mounted Kinect V2 and projector</strong> aimed down at the floor.
+            The Kinect captures <strong>depth maps</strong>, which are then aligned to the projected image using a
+            <strong>homography calibration</strong>. This calibration establishes a reliable correspondence between the
+            Kinect’s depth data and the physical floor plane, allowing the system to accurately
+            <strong>detect floor position and user interaction</strong>.
+        </p>
+
+        <p>
+            With this calibration in place, the projector overlays interactive visuals or games directly onto the ground,
+            enabling responsive experiences where projected content reacts in real time to movement within the space.
+        </p>
+    </div>
+
+    <!-- Gallery Section -->
+    <h2 class="section-title">Gallery from This Project</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="../WixMedia/Projects/ProjectionMapping/ProjectionMapping2.JPG"
+                 alt="Whiteboard Projection Mapping"
+                 data-description="Projector mapped to four whiteboards for aligned scenes and content displays">
+        </div>
+        <div class="gallery-item">
+            <img src="../WixMedia/Projects/ProjectionMapping/projMap.JPG"
+                 alt="Projection Mapping Setup Detail"
+                 data-description="Projection-mapped whiteboard surface aligned to a defined outline">
+        </div>
+        <div class="gallery-item">
+            <img src="../WixMedia/Projects/ProjectionMapping/projMap2.JPG"
+                 alt="Ceiling Kinect V2 + Projector Floor Setup"
+                 data-description="Ceiling-mounted Kinect V2 and projector using homography-calibrated depth mapping for floor interaction">
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+    <div class="lightbox-description" id="lightbox-description"></div>
+</div>
+
+<footer></footer>
+
+<script src="../js/project.js"></script>
+</body>
+</html>

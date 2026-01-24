@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Remington Orange Portfolio</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                    <img src="../WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../about.html">About + Resume</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Back Button -->
+    <div class="back-button">
+        <a href="../portfolio.html">&larr; Back to Projects</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="../WixMedia/Projects/BellScan/AMIC_Bell_Render.png" alt="3D Scanned Bell Render" class="hero-image">
+        <div class="overlay">
+            <h1 class="project-title">Liberty Bell Replica – 3D Scan & Visualization</h1>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="description">
+            <p>
+                This project involved the <strong>3D scanning and digital visualization of a replica of the Liberty Bell</strong>
+                located in Penn State’s Advanced Manufacturing and Innovation Center (AMIC). Using an
+                <strong>Artec Eva structured-light scanner</strong>, the bell was captured as part of a research collaboration
+                with Jon Young at University Park, supporting ongoing work that explores how a bell’s
+                <strong>metal thickness relates to its resonant frequencies</strong>.
+            </p>
+
+            <p>
+                I assisted directly with the scanning process and was responsible for
+                <strong>all post-processing and visualization</strong>, including mesh cleanup and rendering in Blender.
+                The primary render illustrates the scanned data in three forms—wireframe geometry, solid mesh,
+                and a fully rendered model—providing a clear comparison between raw scan data and refined output.
+            </p>
+
+            <p>
+                This workflow demonstrates how structured-light scanning and careful post-processing can support
+                research, documentation, and analysis by translating physical artifacts into accurate and readable
+                digital models.
+            </p>
+
+                        <strong>LinkedIn Post:</strong><br>
+            <a href="https://www.linkedin.com/company/77656511/admin/page-posts/published/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> View post
+            </a>
+        </div>
+
+        <!-- Gallery Section -->
+        <h2 class="section-title">Gallery from This Project</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/BellScan/AMIC_Bell_Render.png"
+                     alt="Bell Render Visualization"
+                     data-description="Blender visualization showing wireframe, solid mesh, and fully rendered 3D scan">
+            </div>
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/BellScan/BellScanning.JPG"
+                     alt="Bell Scanning Process"
+                     data-description="3D scanning the Liberty Bell replica using an Artec Eva at AMIC">
+            </div>
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/BellScan/Bell.JPG"
+                     alt="Liberty Bell Replica"
+                     data-description="Replica of the Liberty Bell used for scanning and research">
+            </div>
+                        <div class="gallery-item">
+                <img src="../WixMedia/Projects/BellScan/BellProcess.JPG"
+                     alt="Liberty Bell Process"
+                     data-description="Replica of the Liberty Bell used for scanning and research">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+        <div class="lightbox-description" id="lightbox-description"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/project.js"></script>
+</body>
+</html>
