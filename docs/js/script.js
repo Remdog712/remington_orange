@@ -137,6 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
 { src: "WixMedia/3DModels/RollingChair/RollingChair.png", category: "3dmodels", title: "Rolling Chair", description: "Chair from Project Corpo Project", modelSrc: "WixMedia/3DModels/RollingChair/RollingChair.glb", alt: "RollingChair" },  
 { src: "WixMedia/3DModels/ResearcherRobot/ResearcherRobot.png", category: "3dmodels", title: "Researcher Robot", description: "Researcher Robot from Project Corpo Project", modelSrc: "WixMedia/3DModels/ResearcherRobot/ResearcherRobot.glb", alt: "ResearcherRobot" },    
 { src: "WixMedia/3DModels/SecurityCamera/SecurityCamera.jpg", category: "3dmodels", title: "Security Camera", description: "Security Camera Robot from Project Corpo Project", modelSrc: "WixMedia/3DModels/SecurityCamera/SecurityCamera.glb", alt: "SecurityCamera" },  
+{ src: "WixMedia/3DModels/DogStatue_Scan/DogStatue_Scan.png", category: "3dmodels", title: "Dog Statue 3D Scan", description: "Statue scanned with Artec Eva", modelSrc: "WixMedia/3DModels/DogStatue_Scan/DogStatue_Scan.glb", alt: "DogStatue_Scan" },  
+{ src: "WixMedia/3DModels/BlueChair_Scan/BlueChair_Scan.png", category: "3dmodels", title: "Blue Chair 3D Scan", description: "Blue chair 3D scanned with Artec Eva", modelSrc: "WixMedia/3DModels/BlueChair_Scan/BlueChair_Scan.glb", alt: "BlueChair_Scan" },  
 ];
 
   
