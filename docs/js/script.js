@@ -139,6 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
 { src: "WixMedia/3DModels/SecurityCamera/SecurityCamera.jpg", category: "3dmodels", title: "Security Camera", description: "Security Camera Robot from Project Corpo Project", modelSrc: "WixMedia/3DModels/SecurityCamera/SecurityCamera.glb", alt: "SecurityCamera" },  
 { src: "WixMedia/3DModels/DogStatue_Scan/DogStatue_Scan.png", category: "3dmodels", title: "Dog Statue 3D Scan", description: "Statue scanned with Artec Eva", modelSrc: "WixMedia/3DModels/DogStatue_Scan/DogStatue_Scan.glb", alt: "DogStatue_Scan" },  
 { src: "WixMedia/3DModels/BlueChair_Scan/BlueChair_Scan.png", category: "3dmodels", title: "Blue Chair 3D Scan", description: "Blue chair 3D scanned with Artec Eva", modelSrc: "WixMedia/3DModels/BlueChair_Scan/BlueChair_Scan.glb", alt: "BlueChair_Scan" },  
+{ src: "WixMedia/3DModels/Flashlight/Flashlight.png", category: "3dmodels", title: "Flashlight", description: "Flashlight made for Lamplight Game project", modelSrc: "WixMedia/3DModels/Flashlight/Flashlight.glb", alt: "Flashlight" },
+{ src: "WixMedia/3DModels/Guncase/Guncase.jpg", category: "3dmodels", title: "Gun Case", description: "Gun case Scan", modelSrc: "WixMedia/3DModels/Guncase/Guncase.glb", alt: "Guncase" },
+{ src: "WixMedia/3DModels/WoodenPipe/WoodenPipe.jpg", category: "3dmodels", title: "Wooden Pipe", description: "Wooden pipe Scan - Carved by Ethan Woodring and then scanned with Artec Eva", modelSrc: "WixMedia/3DModels/WoodenPipe/WoodenPipe.glb", alt: "WoodenPipe" },
+
 ];
 
   
