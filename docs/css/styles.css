@@ -199,6 +199,26 @@ main {
     opacity: 0.8;
 }
 
+.image-item.video-item::after {
+    content: '\f04b';
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.72);
+    color: #fff;
+    font-family: 'Font Awesome 6 Free';
+    font-size: 1.2em;
+    font-weight: 900;
+    pointer-events: none;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
 /* Lightbox Styles */
 #lightbox {
     display: none;
@@ -251,6 +271,101 @@ main {
     word-wrap: break-word;
     margin-left: auto;
     margin-right: auto;
+}
+
+#videobox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 21000;
+    background: rgba(10, 10, 10, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#videobox[aria-hidden="false"] {
+    display: flex;
+}
+
+.videobox-inner {
+    position: relative;
+    width: min(1100px, 96vw);
+    max-height: 90vh;
+    overflow: auto;
+    background: #111;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+#videobox-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.videobox-header {
+    padding-right: 48px;
+    margin-bottom: 18px;
+}
+
+#videobox-title {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#videobox-description {
+    margin: 10px 0 0;
+    color: #d5d5d5;
+    font-size: 1.02em;
+    line-height: 1.7;
+    text-transform: none;
+}
+
+#videobox-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 14px;
+    background: #000;
+}
+
+.videobox-playlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.videobox-playlist:empty {
+    display: none;
+}
+
+.videobox-playlist button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.videobox-playlist button:hover,
+.videobox-playlist button.active {
+    background: #D97742;
+    transform: translateY(-1px);
 }
 /* Make sure the modal inner container has height */
 .modelbox-inner { height: min(800px, 86vh); }
@@ -324,6 +439,14 @@ main {
     .about-blurb p {
         font-size: 1em;
         padding: 0 10px;
+    }
+
+    .videobox-inner {
+        padding: 20px;
+    }
+
+    #videobox-title {
+        font-size: 1.45em;
     }
     
 }

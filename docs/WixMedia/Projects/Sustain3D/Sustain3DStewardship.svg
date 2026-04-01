@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sustain3D stewardship graphic</title>
+  <desc id="desc">A visual comparing working files and preservation storage within the Sustain3D framework.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8ea" />
+      <stop offset="100%" stop-color="#f4e4d2" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <text x="120" y="140" fill="#d97742" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">PRESERVATION MODEL</text>
+  <text x="120" y="220" fill="#2c2c2c" font-family="Arial, sans-serif" font-size="74" font-weight="700">Stewardship Structure</text>
+  <text x="120" y="280" fill="#575757" font-family="Arial, sans-serif" font-size="32">Separating active production work from long-term preservation care.</text>
+
+  <g transform="translate(140 350)">
+    <rect width="560" height="400" rx="34" fill="#fffdf8" stroke="#e7c2a9" stroke-width="4" />
+    <text x="48" y="84" fill="#d97742" font-family="Arial, sans-serif" font-size="34" font-weight="700">WORKING FILES</text>
+    <text x="48" y="138" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">- Edits, derivatives, and active project files</text>
+    <text x="48" y="188" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">- Flexible space for processing and revision</text>
+    <text x="48" y="238" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">- Useful for production, not treated as final</text>
+    <text x="48" y="326" fill="#7a7a7a" font-family="Arial, sans-serif" font-size="26">Purpose:</text>
+    <text x="48" y="366" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">Support iterative work without confusing it</text>
+    <text x="48" y="404" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">with authoritative preservation materials.</text>
+  </g>
+
+  <g transform="translate(900 350)">
+    <rect width="560" height="400" rx="34" fill="#fff4ea" stroke="#d97742" stroke-width="4" />
+    <text x="48" y="84" fill="#d97742" font-family="Arial, sans-serif" font-size="34" font-weight="700">PRESERVATION STORAGE</text>
+    <text x="48" y="138" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">- Raw captures and high-resolution masters</text>
+    <text x="48" y="188" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">- Metadata, paradata, and repository packaging</text>
+    <text x="48" y="238" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">- Clear records for reuse, access, and DOI publication</text>
+    <text x="48" y="326" fill="#7a7a7a" font-family="Arial, sans-serif" font-size="26">Purpose:</text>
+    <text x="48" y="366" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">Protect the files that carry long-term value</text>
+    <text x="48" y="404" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="28">and the documentation needed to understand them.</text>
+  </g>
+
+  <rect x="740" y="522" width="120" height="16" rx="8" fill="#d97742" />
+  <polygon points="860,530 828,506 828,554" fill="#d97742" />
+</svg>

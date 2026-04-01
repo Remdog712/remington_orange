@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // -------------------------
-    // IMAGE + MODEL DATA
-    // Add modelSrc to any item you want to open in 3D viewer
+    // IMAGE + MODEL + VIDEO DATA
+    // Add modelSrc to open the 3D viewer or videoSrc/videoGroup to open the video modal.
     // -------------------------
     const images = [
   { src: "WixMedia/Photography/IMG_2101.jpg", category: "photography", title: "Enviormental Storytelling", description: "Part of Nature Reclaims Photo Essay", alt: "Photography 5" },
@@ -80,6 +80,52 @@ document.addEventListener('DOMContentLoaded', () => {
   { src: "WixMedia/Photography/Webadd/IMG_6370.jpg", category: "photography", title: "Somberly", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/IMG_6379.jpg", category: "photography", title: "Cheesin", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/IMG_6433.jpg", category: "photography", title: "Virtually Not Here", description: "", alt: "Photography 35" },
+
+  // Paintings
+  { src: "WixMedia/Painting/MiniLandscape.jpg", category: "paintings", title: "MiniLandscape", description: "Painted for ART50 - Intro Painting", alt: "MiniLandscape painting" },
+  { src: "WixMedia/Painting/SeaGlass.jpg", category: "paintings", title: "SeaGlass", description: "Painted for ART50 - Intro Painting", alt: "SeaGlass painting" },
+  { src: "WixMedia/Painting/WinterBoots.jpg", category: "paintings", title: "WinterBoots", description: "Painted for ART50 - Intro Painting", alt: "WinterBoots painting" },
+  { src: "WixMedia/Painting/Minha.jpg", category: "paintings", title: "Minha", description: "Painted for ART50 - Intro Painting", alt: "Minha painting" },
+
+  // Videos
+  { src: "WixMedia/Videos/Dr.BVideo.png", category: "videos", title: "Dr. B Video", description: "Intro to DHSI course: Processing Your XML/TEI with the XML Family of Languages.", videoSrc: "https://www.youtube.com/watch?v=gKdkn8Tp-1E", alt: "Dr. B Video thumbnail" },
+  { src: "WixMedia/Videos/VARVideos.png", category: "videos", title: "VAR All TV Intros", description: "Video branding and intro work created for the VAR Lab.", videoSrc: "https://youtu.be/D6160XEQh9w", alt: "VAR All TV Intros thumbnail" },
+  { src: "WixMedia/Videos/VARTravels.png", category: "videos", title: "Exploring The Outerbanks - VAR Travels #4", description: "Travel-focused video from the VAR Travels series.", videoSrc: "https://www.youtube.com/watch?v=eTwAI6rqkSc&list=PLZllh0dfSonoEmqp_WwRmcoSVjoUhdUo7&index=4", alt: "VAR Travels thumbnail" },
+  {
+    src: "WixMedia/Videos/HighSchool.png",
+    category: "videos",
+    title: "Highschool Stuff",
+    description: "Archived high school video projects collected in one place.",
+    videoGroup: [
+      { title: "High School Video 1", url: "https://youtu.be/d-jLy5gPrHU" },
+      { title: "High School Video 2", url: "https://youtu.be/IMX7k-O5rjw" },
+      { title: "High School Video 3", url: "https://youtu.be/DJvC8yhKpuI" },
+      { title: "High School Video 4", url: "https://youtu.be/JaWS7j72qD8" },
+      { title: "High School Video 5", url: "https://youtu.be/oR4BpEJiL-I" },
+      { title: "High School Video 6", url: "https://youtu.be/tr9LX__Lt-M" },
+      { title: "High School Video 7", url: "https://youtu.be/nuNo_elRsrg" },
+      { title: "High School Video 8", url: "https://youtu.be/x7gHKn8C9UE" }
+    ],
+    alt: "High school archive thumbnail"
+  },
+  { src: "WixMedia/Videos/ProceduralCrowd.png", category: "videos", title: "Procedural Crowd DIGIT 409", description: "Procedural crowd animation and visualization work.", videoSrc: "https://youtu.be/uGpqOvnBRrA", alt: "Procedural Crowd thumbnail" },
+  { src: "WixMedia/Videos/Project1.png", category: "videos", title: "DIGIT 297 Project 1", description: "Course project video developed for DIGIT 297.", videoSrc: "https://www.youtube.com/watch?v=9xZAlnhV98o", alt: "DIGIT 297 Project 1 thumbnail" },
+  { src: "WixMedia/Videos/pandoamerica.png", category: "videos", title: "PandoAmerica", description: "Video work connected to the PandoAmerica project.", videoSrc: "https://youtu.be/T5IBdmVY5Z0", alt: "PandoAmerica thumbnail" },
+  { src: "WixMedia/Videos/CalmOcean.png", category: "videos", title: "GAME 180 Turbulent and Calm Ocean Sim", description: "Ocean simulation study created for GAME 180.", videoSrc: "https://youtu.be/8CIhAO-3f18", alt: "Calm Ocean thumbnail" },
+  { src: "WixMedia/Videos/TheForest.png", category: "videos", title: "TheForest", description: "Environment-focused video study.", videoSrc: "https://youtu.be/3Vt0E-bE3Ec", alt: "The Forest thumbnail" },
+  { src: "WixMedia/Videos/TheStump.png", category: "videos", title: "TheStump", description: "A short environment and rendering study.", videoSrc: "https://youtu.be/DqYWCvtF-9o", alt: "The Stump thumbnail" },
+  { src: "WixMedia/Videos/VARWestern.png", category: "videos", title: "VAR Western Skit", description: "A playful VAR Lab video project with a western theme.", videoSrc: "https://youtu.be/gc5N7oz9Tag", alt: "VAR Western thumbnail" },
+  { src: "WixMedia/Videos/LowPower.png", category: "videos", title: "LowPower", description: "Short film work connected to the Low Power project.", videoSrc: "https://youtu.be/tf7oeub9Nws", alt: "Low Power thumbnail" },
+  { src: "WixMedia/Videos/BladeAndSorcery.png", category: "videos", title: "VR Immersion Done Right - Blade and Sorcery", description: "GAME 460 final project examining VR immersion.", videoSrc: "https://youtu.be/4PBTQe9u86E", alt: "Blade and Sorcery thumbnail" },
+  { src: "WixMedia/Videos/MotionMatch1.png", category: "videos", title: "MotionMatching1", description: "Motion matching test and animation study.", videoSrc: "https://www.youtube.com/watch?v=C5nLx2CI8fY", alt: "Motion Matching 1 thumbnail" },
+  { src: "WixMedia/Videos/MotionMatch2.png", category: "videos", title: "MotionMatch2", description: "Second motion matching exploration.", videoSrc: "https://youtu.be/lfITEl4ALZ4", alt: "Motion Matching 2 thumbnail" },
+  { src: "WixMedia/Videos/LoopedWalkCycle.png", category: "videos", title: "Looped Walk Cycle", description: "Looped character motion exercise.", videoSrc: "https://youtu.be/Yg3gntA9KLI", alt: "Looped walk cycle thumbnail" },
+  { src: "WixMedia/Videos/NoiseAnimation.png", category: "videos", title: "Noise Animation", description: "Motion study driven by noise-based animation.", videoSrc: "https://youtu.be/lR261JJPwkQ", alt: "Noise Animation thumbnail" },
+  { src: "WixMedia/Videos/ManualBallBounce.png", category: "videos", title: "ManualBallBounce", description: "Animation exercise focused on timing and bounce.", videoSrc: "https://youtu.be/T49CCjFFME0", alt: "Manual Ball Bounce thumbnail" },
+  { src: "WixMedia/Videos/ProjectCorpoTrailer.png", category: "videos", title: "Project Corpo Trailer", description: "Trailer editing and presentation for Project Corpo.", videoSrc: "https://youtu.be/PdrzPxJWkic", alt: "Project Corpo Trailer thumbnail" },
+  { src: "WixMedia/Videos/theMuseum.png", category: "videos", title: "The Museum", description: "Museum-themed video project.", videoSrc: "https://youtu.be/U_NEi3p8j4M", alt: "The Museum thumbnail" },
+  { src: "WixMedia/Videos/LamplightTrailer.png", category: "videos", title: "LamplightTrailer", description: "Trailer cut for the Lamplight project.", videoSrc: "https://youtu.be/JmSoUX08f0s", alt: "Lamplight Trailer thumbnail" },
+  { src: "WixMedia/Videos/RoutineRust.png", category: "videos", title: "Routine Rust", description: "Trailer and showcase video for Routine Rust.", videoSrc: "https://youtu.be/IBrJg1t4MA0", alt: "Routine Rust thumbnail" },
 
   // =================
   // 3D Works
@@ -150,10 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageContainer = document.getElementById('image-collage');
     if (!imageContainer) return;
 
-    function createImageItem(item) {
+    function createImageItem(item, index) {
         const wrapper = document.createElement('div');
         wrapper.className = 'image-item';
         wrapper.setAttribute('data-category', item.category);
+        wrapper.setAttribute('data-index', String(index));
+        if (item.videoSrc || item.videoGroup) {
+            wrapper.classList.add('video-item');
+        }
 
         const img = document.createElement('img');
         img.src = item.src;
@@ -167,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Populate and Shuffle
-    images.forEach(item => imageContainer.appendChild(createImageItem(item)));
+    images.forEach((item, index) => imageContainer.appendChild(createImageItem(item, index)));
     
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -183,6 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('#lightbox .close');
+
+    const videobox = document.getElementById('videobox');
+    const videoboxFrame = document.getElementById('videobox-frame');
+    const videoboxTitle = document.getElementById('videobox-title');
+    const videoboxDescription = document.getElementById('videobox-description');
+    const videoboxPlaylist = document.getElementById('videobox-playlist');
+    const videoboxClose = document.getElementById('videobox-close');
 
     const modelbox = document.getElementById('modelbox');
     const modelboxViewer = document.getElementById('modelbox-viewer');
@@ -201,6 +258,87 @@ function openLightbox(imgSrc, title, description) {
     lightbox.style.display = 'flex'; // This ensures the background covers the screen
 }
 
+    function buildYouTubeEmbedUrl(url) {
+        try {
+            const parsed = new URL(url);
+            const playlistId = parsed.searchParams.get('list');
+            let videoId = '';
+
+            if (parsed.hostname.includes('youtu.be')) {
+                videoId = parsed.pathname.replace('/', '');
+            } else if (parsed.searchParams.get('v')) {
+                videoId = parsed.searchParams.get('v');
+            } else if (parsed.pathname.startsWith('/embed/')) {
+                videoId = parsed.pathname.split('/')[2];
+            }
+
+            if (!videoId) {
+                return url;
+            }
+
+            const params = new URLSearchParams({ autoplay: '1', rel: '0' });
+            if (playlistId) {
+                params.set('list', playlistId);
+            }
+
+            return `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
+        } catch (error) {
+            return url;
+        }
+    }
+
+    function renderVideoPlaylist(videos, activeIndex) {
+        if (!videoboxPlaylist) return;
+
+        videoboxPlaylist.innerHTML = '';
+        if (!videos || videos.length < 2) {
+            return;
+        }
+
+        videos.forEach((video, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.textContent = video.title || `Video ${index + 1}`;
+            if (index === activeIndex) {
+                button.classList.add('active');
+            }
+            button.addEventListener('click', () => {
+                playVideoSelection(videos, index);
+            });
+            videoboxPlaylist.appendChild(button);
+        });
+    }
+
+    function playVideoSelection(videos, index) {
+        const activeVideo = videos[index];
+        if (!activeVideo || !videoboxFrame) return;
+
+        videoboxFrame.src = buildYouTubeEmbedUrl(activeVideo.url || activeVideo.videoSrc || '');
+        if (videoboxTitle) {
+            videoboxTitle.textContent = activeVideo.title || '';
+        }
+        if (videoboxDescription) {
+            videoboxDescription.textContent = activeVideo.description || '';
+        }
+        renderVideoPlaylist(videos, index);
+    }
+
+    function openVideobox(item) {
+        if (!videobox || !videoboxFrame) return;
+
+        const videos = item.videoGroup && item.videoGroup.length
+            ? item.videoGroup
+            : [{
+                title: item.title,
+                description: item.description,
+                url: item.videoSrc
+            }];
+
+        videobox.setAttribute('aria-hidden', 'false');
+        videobox.style.display = 'flex';
+        playVideoSelection(videos, 0);
+    }
+
     function openModelbox(modelSrc, posterSrc, title, description) {
         if (!modelbox || !modelboxViewer) return;
         
@@ -218,6 +356,16 @@ function openLightbox(imgSrc, title, description) {
 
     function closeAllModals() {
         if (lightbox) lightbox.style.display = 'none';
+        if (videobox) {
+            videobox.setAttribute('aria-hidden', 'true');
+            videobox.style.display = 'none';
+            if (videoboxFrame) {
+                videoboxFrame.src = '';
+            }
+            if (videoboxPlaylist) {
+                videoboxPlaylist.innerHTML = '';
+            }
+        }
         if (modelbox) {
             modelbox.setAttribute('aria-hidden', 'true');
             modelbox.style.display = 'none';
@@ -226,9 +374,9 @@ function openLightbox(imgSrc, title, description) {
     }
 
     // Close Listeners
-    [lightboxClose, modelboxClose].forEach(btn => btn?.addEventListener('click', closeAllModals));
+    [lightboxClose, videoboxClose, modelboxClose].forEach(btn => btn?.addEventListener('click', closeAllModals));
     window.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target === modelbox) closeAllModals();
+        if (e.target === lightbox || e.target === videobox || e.target === modelbox) closeAllModals();
     });
 
     // 6. Mesh/Viewer Controls (FIXED WIREFRAME)
@@ -261,17 +409,22 @@ function openLightbox(imgSrc, title, description) {
 
     // 7. Click Handler (Event Delegation)
     imageContainer.addEventListener('click', (e) => {
-        const img = e.target.closest('img');
-        if (!img) return;
+        const wrapper = e.target.closest('.image-item');
+        if (!wrapper) return;
 
-        const title = img.getAttribute('data-title') || '';
-        const description = img.getAttribute('data-description') || '';
-        const modelSrc = img.getAttribute('data-model-src');
+        const item = images[Number(wrapper.getAttribute('data-index'))];
+        const img = wrapper.querySelector('img');
+        if (!item || !img) return;
 
-        if (modelSrc) {
-            openModelbox(modelSrc, img.src, title, description);
+        if (item.videoSrc || item.videoGroup) {
+            openVideobox(item);
+            return;
+        }
+
+        if (item.modelSrc) {
+            openModelbox(item.modelSrc, img.src, item.title || '', item.description || '');
         } else {
-            openLightbox(img.src, title, description);
+            openLightbox(img.src, item.title || '', item.description || '');
         }
     });
 

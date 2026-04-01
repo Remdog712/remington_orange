@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sustain3D hero graphic</title>
+  <desc id="desc">A thesis cover style graphic for Sustain3D featuring preservation keywords and structured blocks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e8" />
+      <stop offset="100%" stop-color="#f6ead7" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97742" />
+      <stop offset="100%" stop-color="#f0a76a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <circle cx="1360" cy="170" r="210" fill="#f6d6bd" opacity="0.8" />
+  <circle cx="250" cy="720" r="180" fill="#f0dfcf" opacity="0.75" />
+  <rect x="120" y="120" width="1360" height="660" rx="36" fill="#fffdf8" stroke="#e9c8ae" stroke-width="4" />
+  <rect x="120" y="120" width="18" height="660" rx="9" fill="url(#accent)" />
+
+  <text x="190" y="210" fill="#d97742" font-family="Arial, sans-serif" font-size="32" letter-spacing="8">SCHREYER'S HONORS COLLEGE THESIS</text>
+  <text x="190" y="320" fill="#2c2c2c" font-family="Arial, sans-serif" font-size="106" font-weight="700">Sustain3D</text>
+  <text x="190" y="390" fill="#5a5a5a" font-family="Arial, sans-serif" font-size="40">A Practical Framework for 3D Data Preservation</text>
+
+  <g transform="translate(190 470)">
+    <rect width="240" height="150" rx="24" fill="#fff5eb" stroke="#e9c8ae" stroke-width="3" />
+    <text x="36" y="62" fill="#d97742" font-family="Arial, sans-serif" font-size="28" font-weight="700">WORKFLOWS</text>
+    <text x="36" y="100" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">Capture, process,</text>
+    <text x="36" y="130" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">package, publish</text>
+  </g>
+
+  <g transform="translate(470 470)">
+    <rect width="240" height="150" rx="24" fill="#fff5eb" stroke="#e9c8ae" stroke-width="3" />
+    <text x="36" y="62" fill="#d97742" font-family="Arial, sans-serif" font-size="28" font-weight="700">METADATA</text>
+    <text x="36" y="100" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">Naming, context,</text>
+    <text x="36" y="130" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">and paradata</text>
+  </g>
+
+  <g transform="translate(750 470)">
+    <rect width="240" height="150" rx="24" fill="#fff5eb" stroke="#e9c8ae" stroke-width="3" />
+    <text x="36" y="62" fill="#d97742" font-family="Arial, sans-serif" font-size="28" font-weight="700">STORAGE</text>
+    <text x="36" y="100" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">Working files kept</text>
+    <text x="36" y="130" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">separate from masters</text>
+  </g>
+
+  <g transform="translate(1030 470)">
+    <rect width="240" height="150" rx="24" fill="#fff5eb" stroke="#e9c8ae" stroke-width="3" />
+    <text x="36" y="62" fill="#d97742" font-family="Arial, sans-serif" font-size="28" font-weight="700">ACCESS</text>
+    <text x="36" y="100" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">FAIR, CARE,</text>
+    <text x="36" y="130" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="22">and DOI publication</text>
+  </g>
+
+  <text x="190" y="700" fill="#6a6a6a" font-family="Arial, sans-serif" font-size="28">Designed for sustainable 3D stewardship across small institutions, labs, and independent projects.</text>
+</svg>

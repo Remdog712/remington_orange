@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Remington Orange Portfolio</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                    <img src="../WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../about.html">About + Resume</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="back-button">
+        <a href="../portfolio.html">&larr; Back to Projects</a>
+    </div>
+
+    <section class="hero-section">
+        <img src="../WixMedia/Projects/Sustain3D/Sustain3d_logoV2.png" alt="Sustain3D logo" class="hero-image hero-image-contain">
+        <div class="overlay">
+            <div>
+                <h1 class="project-title">Sustain3D</h1>
+                <p class="project-subtitle">A Practical Framework for 3D Data Preservation</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="project-links">
+            <a href="https://sustain3d.github.io/Sustain3D/" target="_blank" rel="noopener" class="project-link">Visit The Project Website</a>
+        </div>
+
+        <div class="embed-section">
+            <iframe src="https://sustain3d.github.io/Sustain3D/" class="embed-frame" title="Sustain3D website preview" loading="lazy"></iframe>
+            <p class="embed-caption">Embedded preview of the Sustain3D project website.</p>
+        </div>
+
+        <div class="description">
+            <p>Sustain3D is my Schreyer's Honors College thesis project at The Pennsylvania State University, completed in Spring 2026 for a baccalaureate degree in Digital Media, Arts, and Technology with honors in Digital Media, Arts, and Technology. The project introduces a practical framework for preserving 3D data in a way that is structured, scalable, and realistic for individuals, labs, and small organizations.</p>
+
+            <p>The thesis responds to a growing challenge in digital preservation. While scanning and 3D digitization tools are becoming more accessible across cultural heritage, research, and creative practice, the long-term organization and stewardship of 3D assets often remain inconsistent. Sustain3D addresses that gap through clear workflows, naming conventions, metadata guidance, and repository-level structure that make preservation decisions easier to carry forward over time.</p>
+
+            <p>Built around FAIR and CARE principles, the framework emphasizes separating working files from preservation storage, retaining raw and high-resolution master files, and documenting processing choices through metadata and paradata. The project grounds those ideas in practice through a case study involving the structured light scanning of a Cooper's Hawk specimen from the Tom Ridge Environmental Center, tracing the path from capture and processing to preservation packaging and DOI publication.</p>
+
+            <p>More than a single thesis deliverable, Sustain3D argues that sustainable 3D stewardship does not require large institutional infrastructure. With clear structure, defined responsibility, and realistic storage strategies, the project offers a practical model for preserving 3D data responsibly over time.</p>
+        </div>
+
+        <div class="detail-grid">
+            <article class="detail-card">
+                <h3>Thesis Context</h3>
+                <p>Submitted to Schreyer's Honors College in partial fulfillment of the requirements for a baccalaureate degree in Digital Media, Arts, and Technology with honors in the same field.</p>
+            </article>
+            <article class="detail-card">
+                <h3>Faculty Review</h3>
+                <p>Reviewed and approved by Elisa Beshero-Bondar, Professor of Digital Humanities and thesis supervisor, and Christopher R. Shelton, Associate Professor of Clinical Psychology and thesis honors adviser.</p>
+            </article>
+            <article class="detail-card">
+                <h3>Framework Focus</h3>
+                <p>Structured workflows, naming conventions, metadata standards, paradata, repository organization, and preservation-ready storage planning for 3D collections.</p>
+            </article>
+        </div>
+
+        <h2 class="section-title">Framework Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/Sustain3D/Sustain3d_logoV2.png" alt="Sustain3D logo graphic" class="framework-graphic" data-description="Sustain3D logo and project identity graphic.">
+            </div>
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/Sustain3D/Sustain3DWorkflow.svg" alt="Sustain3D workflow graphic" class="framework-graphic" data-description="A high-level workflow showing capture, organization, documentation, and preservation.">
+            </div>
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/Sustain3D/Sustain3DStewardship.svg" alt="Sustain3D stewardship graphic" class="framework-graphic" data-description="A preservation model separating working files from long-term stewardship storage.">
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+        <div class="lightbox-description" id="lightbox-description"></div>
+    </div>
+
+    <footer>
+    </footer>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>

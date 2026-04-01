@@ -127,6 +127,8 @@
           <button class="filter-option active" data-filter="all">All</button>
           <button class="filter-option" data-filter="3dworks">3D Works</button>
           <button class="filter-option" data-filter="photography">Photography</button>
+          <button class="filter-option" data-filter="videos">Videos</button>
+          <button class="filter-option" data-filter="paintings">Paintings</button>
           <button class="filter-option" data-filter="3dmodels">3D Models</button>
         </div>
       </div>
@@ -139,6 +141,25 @@
     <span class="close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
     <div id="lightbox-caption"></div>
+  </div>
+
+  <div id="videobox" aria-hidden="true">
+    <div class="videobox-inner">
+      <span id="videobox-close" aria-label="Close">&times;</span>
+      <div class="videobox-header">
+        <h2 id="videobox-title"></h2>
+        <p id="videobox-description"></p>
+      </div>
+      <iframe
+        id="videobox-frame"
+        src=""
+        title="Video player"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <div id="videobox-playlist" class="videobox-playlist"></div>
+    </div>
   </div>
 
   <div id="modelbox" aria-hidden="true">

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sustain3D workflow graphic</title>
+  <desc id="desc">A diagram showing the Sustain3D workflow from capture to preservation and publication.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff9ec" />
+      <stop offset="100%" stop-color="#f4e5d2" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97742" />
+      <stop offset="100%" stop-color="#f0a76a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <text x="120" y="140" fill="#d97742" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">SUSTAIN3D FRAMEWORK</text>
+  <text x="120" y="220" fill="#2c2c2c" font-family="Arial, sans-serif" font-size="74" font-weight="700">Structured Workflow</text>
+  <text x="120" y="280" fill="#575757" font-family="Arial, sans-serif" font-size="32">A practical path from 3D capture to long-term stewardship.</text>
+
+  <g transform="translate(120 390)">
+    <rect width="240" height="190" rx="30" fill="#fffdf8" stroke="#e9c8ae" stroke-width="4" />
+    <text x="36" y="70" fill="#d97742" font-family="Arial, sans-serif" font-size="30" font-weight="700">1. CAPTURE</text>
+    <text x="36" y="112" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">Structured light scans,</text>
+    <text x="36" y="146" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">raw data, and source</text>
+    <text x="36" y="180" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">context preserved.</text>
+  </g>
+
+  <rect x="380" y="472" width="140" height="14" rx="7" fill="url(#accent)" />
+  <polygon points="520,479 490,458 490,500" fill="#d97742" />
+
+  <g transform="translate(560 390)">
+    <rect width="240" height="190" rx="30" fill="#fffdf8" stroke="#e9c8ae" stroke-width="4" />
+    <text x="36" y="70" fill="#d97742" font-family="Arial, sans-serif" font-size="30" font-weight="700">2. ORGANIZE</text>
+    <text x="36" y="112" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">Consistent naming,</text>
+    <text x="36" y="146" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">folder structure, and</text>
+    <text x="36" y="180" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">separated work areas.</text>
+  </g>
+
+  <rect x="820" y="472" width="140" height="14" rx="7" fill="url(#accent)" />
+  <polygon points="960,479 930,458 930,500" fill="#d97742" />
+
+  <g transform="translate(1000 390)">
+    <rect width="240" height="190" rx="30" fill="#fffdf8" stroke="#e9c8ae" stroke-width="4" />
+    <text x="36" y="70" fill="#d97742" font-family="Arial, sans-serif" font-size="30" font-weight="700">3. DOCUMENT</text>
+    <text x="36" y="112" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">Metadata records,</text>
+    <text x="36" y="146" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">paradata, and clear</text>
+    <text x="36" y="180" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">processing decisions.</text>
+  </g>
+
+  <rect x="1260" y="472" width="140" height="14" rx="7" fill="url(#accent)" />
+  <polygon points="1400,479 1370,458 1370,500" fill="#d97742" />
+
+  <g transform="translate(1240 390)">
+    <rect width="240" height="190" rx="30" fill="#fffdf8" stroke="#e9c8ae" stroke-width="4" />
+    <text x="36" y="70" fill="#d97742" font-family="Arial, sans-serif" font-size="30" font-weight="700">4. PRESERVE</text>
+    <text x="36" y="112" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">Retention of masters,</text>
+    <text x="36" y="146" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">repository packaging,</text>
+    <text x="36" y="180" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="24">and DOI publication.</text>
+  </g>
+
+  <text x="120" y="735" fill="#5f5f5f" font-family="Arial, sans-serif" font-size="28">Sustain3D focuses on workflows that are achievable without large institutional infrastructure.</text>
+</svg>
