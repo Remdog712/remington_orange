@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Spring 2026 Yahn Art Show Projector Installation</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
+                    <img src="../WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../about.html">About + Resume</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Back Button -->
+    <div class="back-button">
+        <a href="../portfolio.html">&larr; Back to Projects</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="../WixMedia/Projects/YahnProjector/Yahn_Hero.jpg" alt="Yahn Art Show Projector Installation" class="hero-image">
+        <div class="overlay">
+            <h1 class="project-title">Spring 2026 Yahn Art Show Projector Installation</h1>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="description">
+            <p>
+                The Spring 2026 Yahn Art Show Projector Installation was an interactive gallery project that used a depth camera and Processing 4 to connect physical artwork with responsive digital information. I created custom software that detected when a viewer crossed in front of a real image, then projected a visual frame around the artwork and displayed related details such as the artist name, painting title, and date of creation.
+                <br><br>
+                This project combined creative coding, projection design, camera-based interaction, and exhibition display into one installation. The goal was to make the gallery experience feel more active and informative without replacing the physical artwork itself. Instead, the digital layer responded to the viewer’s presence and added context only when someone engaged with the piece.
+                <br><br>
+                The installation demonstrates my interest in interactive media, immersive technology, and practical software development for public-facing creative spaces. It also reflects my ability to build a working prototype that blends technical systems with visual design and audience experience.
+            </p>
+        </div>
+
+        <!-- Video Section -->
+        <h2 class="section-title">Project Demo</h2>
+        <div style="display:flex; justify-content:center; margin-bottom:20px;">
+            <iframe width="315" height="560"
+                src="https://www.youtube.com/embed/wQTV27oOi8Q"
+                title="Yahn Art Show Projector Installation Demo"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Gallery Section -->
+        <h2 class="section-title">Gallery from This Project</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/YahnProjector/Yahn_Hero.jpg" alt="Yahn Projector Installation Hero" data-description="Interactive projector installation setup">
+            </div>
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/YahnProjector/Yahn1.JPG" alt="Yahn Projector Installation Example 1" data-description="Depth-camera interaction and projected artwork information">
+            </div>
+            <div class="gallery-item">
+                <img src="../WixMedia/Projects/YahnProjector/Yahn_2.JPG" alt="Yahn Projector Installation Example 2" data-description="Projected frame and metadata display during viewer interaction">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Gallery Images -->
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+        <div class="lightbox-description" id="lightbox-description"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/project.js"></script>
+</body>
+</html>
