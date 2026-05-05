@@ -113,6 +113,16 @@ main {
     line-height: 1.8;
 }
 
+.about-blurb a {
+    color: #D97742;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-blurb a:hover {
+    color: #E39361;
+}
+
 /* Single Image Section */
 .image-container {
     display: flex;
@@ -147,6 +157,12 @@ main {
 }
 
 .awards-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 10px;
+}
+
+.mentions-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 20px 10px;
@@ -345,6 +361,89 @@ main {
     color: #E39361;
 }
 
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    color: #4A4A4A;
+    font-size: 1.05em;
+    line-height: 1.8;
+    text-transform: none;
+}
+
+.mentions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.mention-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #fff9ef;
+    border: 1px solid rgba(217, 119, 66, 0.2);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: left;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.mention-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.mention-source {
+    color: #D97742;
+    font-size: 0.9em;
+    letter-spacing: 0.12em;
+}
+
+.mention-type {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background-color: rgba(217, 119, 66, 0.12);
+    color: #8E4E2C;
+    font-size: 0.82em;
+    letter-spacing: 0.06em;
+}
+
+.mention-card h3 {
+    margin: 0;
+    font-size: 1.45em;
+    color: #2C2C2C;
+    text-transform: none;
+}
+
+.mention-card p {
+    margin: 0;
+    color: #4A4A4A;
+    font-size: 1.02em;
+    line-height: 1.8;
+    text-transform: none;
+}
+
+.mention-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mention-card a:hover {
+    color: #D97742;
+}
+
+.mention-link {
+    margin-top: auto;
+    color: #D97742 !important;
+    font-weight: 500;
+}
+
+.mention-link:hover {
+    color: #E39361 !important;
+}
+
 .resume-viewer {
     width: 95%;
     height: 600px;
@@ -405,6 +504,7 @@ main {
     }
 
     .scholarship-grid,
+    .mentions-grid,
     .awards-grid,
     .media-grid,
     .media-grid-wide {
@@ -438,11 +538,19 @@ main {
         padding: 22px;
     }
 
+    .mention-card {
+        padding: 22px;
+    }
+
     .scholarship-card h3 {
         font-size: 1.35em;
     }
 
     .award-card h3 {
+        font-size: 1.3em;
+    }
+
+    .mention-card h3 {
         font-size: 1.3em;
     }
 }

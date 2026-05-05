@@ -10,6 +10,6 @@ Welcome to my portfolio! Here, you can find my projects, works, and contact info
 ## Contact
 - [LinkedIn](https://www.linkedin.com/in/remington-orange-38746b266/)
 - [GitHub](https://github.com/Remdog712)
-- [Email](mailto:rmo5266@psu.edu)
+- [Email](mailto:remingtonorange712@gmail.com)
 
 Thanks for visiting!
