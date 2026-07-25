@@ -101,19 +101,11 @@ main {
 
 /* Portfolio Grid */
 .portfolio-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Adjust gap between columns as needed */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Portfolio Column */
-.portfolio-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Gap between portfolio items */
 }
 
 /* Portfolio Item */
@@ -126,17 +118,36 @@ main {
     border-radius: 10px;
 }
 
+.portfolio-item a {
+    display: block;
+}
+
 /* Adjust image styling as needed */
 .portfolio-item img {
+    --thumb-scale: 1;
+    --thumb-hover-scale: 1.05;
+    display: block;
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    transition: transform 0.3s;
+    object-position: center;
+    transform: scale(var(--thumb-scale));
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img.thumb-tight {
+    --thumb-scale: 1.12;
+    --thumb-hover-scale: 1.17;
+}
+
+.portfolio-item img.thumb-tighter {
+    --thumb-scale: 1.2;
+    --thumb-hover-scale: 1.25;
 }
 
 /* Hover effects */
 .portfolio-item:hover img {
-    transform: scale(1.05);
+    transform: scale(var(--thumb-hover-scale));
 }
 
 .portfolio-item .overlay {
@@ -168,16 +179,7 @@ main {
 /* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
     .portfolio-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .portfolio-column {
-        width: 100%;
-    }
-
-    .portfolio-item {
-        width: 100%;
+        grid-template-columns: 1fr;
     }
 
     .name-logo {
@@ -220,5 +222,4 @@ main {
     nav ul li a {
         font-size: 0.9em;
     }
-}
 }
