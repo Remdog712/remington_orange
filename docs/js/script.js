@@ -81,6 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
   { src: "WixMedia/Photography/Webadd/IMG_6379.jpg", category: "photography", title: "Cheesin", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/IMG_6433.jpg", category: "photography", title: "Virtually Not Here", description: "", alt: "Photography 35" },
 
+  // Santa Maria, Rio Grande do Sul, Brazil — August 2026
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9262.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9283.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm landscape in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9286.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm scene in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9294.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9317.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9319.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9330.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9332.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9341.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9345.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+  { src: "WixMedia/Photography/SantaMaria-08-2026/IMG_9356.jpg", category: "photography", title: "Santa Maria Farm", description: "Santa Maria, Rio Grande do Sul, Brazil — August 2026", alt: "Farm in Santa Maria, Rio Grande do Sul, Brazil" },
+
   // Paintings
   { src: "WixMedia/Painting/MiniLandscape.jpg", category: "paintings", title: "MiniLandscape", description: "Painted for ART50 - Intro Painting", alt: "MiniLandscape painting" },
   { src: "WixMedia/Painting/SeaGlass.jpg", category: "paintings", title: "SeaGlass", description: "Painted for ART50 - Intro Painting", alt: "SeaGlass painting" },
@@ -177,6 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
   { src: "WixMedia/Renders/LightHouseRender1.png", category: "3dworks", title: "Lighthouse Drone Scan", description: "", alt: "3dworks 37" },
   { src: "WixMedia/Renders/Bluffs.png", category: "3dworks", title: "Drone Scan of Bluffs with Blender Water", description: "", alt: "3dworks 37" },
   { src: "WixMedia/Renders/boots1.png", category: "3dworks", title: "Boot Photogrammetry", description: "", alt: "3dworks 37" },
+
+  // Liberty Bell content creation
+  { src: "WixMedia/Projects/LibertyBell_Content/Bell_Model-Enviroment_Rendered.png", category: "3dworks", title: "Liberty Bell Digital Twin", description: "Rendered presentation of the Liberty Bell digital twin", alt: "Rendered Liberty Bell digital twin" },
+  { src: "WixMedia/Projects/LibertyBell_Content/Bell_Dark_1.png", category: "3dworks", title: "Liberty Bell Digital Twin", description: "Blender render created from the Liberty Bell scan", alt: "Dark Liberty Bell Blender render" },
+  { src: "WixMedia/Projects/LibertyBell_Content/Bell_Light_Rendered.png", category: "3dworks", title: "Liberty Bell Digital Twin", description: "Studio render created from the Liberty Bell scan", alt: "Studio render of the Liberty Bell digital twin" },
+  { src: "WixMedia/Projects/LibertyBell_Content/Bell_Light_Mesh.png", category: "3dworks", title: "Liberty Bell Digital Twin Mesh", description: "Mesh visualization from the Liberty Bell scan", alt: "Mesh visualization of the Liberty Bell digital twin" },
+  { src: "WixMedia/Projects/LibertyBell_Content/Bell_Bisection.png", category: "3dworks", title: "Inside the Liberty Bell", description: "Bisection render of the Liberty Bell digital twin", alt: "Bisection render of the Liberty Bell digital twin" },
 
     // 3D Models
 { src: "WixMedia/3DModels/ProjectCorpo_Pistol/Pistol.png", category: "3dmodels", title: "Project Corpo Pistol", description: "Pistol from Project Corpo Project", modelSrc: "WixMedia/3DModels/ProjectCorpo_Pistol/ProjectCorpo_Pistol.glb", alt: "Project Corpo Pistol" },
