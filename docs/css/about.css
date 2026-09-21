@@ -61,26 +61,32 @@ header {
     margin-left: 15px;
 }
 
-nav ul {
+/* Keep the primary navigation centered even if its container later grows full width. */
+.header-content > nav {
+    width: 100%;
+}
+
+.header-content > nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 20px;
     margin: 10px 0;
     padding: 0;
 }
 
-nav ul li {
+.header-content > nav ul li {
     font-weight: 300;
 }
 
-nav ul li a {
+.header-content > nav ul li a {
     text-decoration: none;
     color: #4A4A4A;
     font-weight: 300;
     font-size: 1em;
 }
 
-nav ul li a:hover {
+.header-content > nav ul li a:hover {
     color: #D97742;
 }
 
