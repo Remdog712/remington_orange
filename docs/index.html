@@ -102,39 +102,30 @@
   <header id="main-header">
     <div class="header-content">
       <div class="logo">
-        <a href="index.html">
+        <a href="/">
           <img src="WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
           <img src="WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
         </a>
       </div>
       <nav>
         <ul>
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="about.html">About + Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="portfolio/">Projects</a></li>
+          <li><a href="about/">About + Resume</a></li>
+          <li><a href="contact/">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="about-blurb">
-      <p>Welcome! I'm Remington Orange, a passionate photographer and 3D artist. Explore my work below.</p>
-    </div>
-
-    <div class="filter-container">
-      <div class="filter-dropdown">
-        <button class="filter-button"><i class="fas fa-filter"></i> Filter <i class="fas fa-chevron-down"></i></button>
-        <div class="filter-menu">
-          <button class="filter-option active" data-filter="all">All</button>
-          <button class="filter-option" data-filter="3dworks">3D Works</button>
-          <button class="filter-option" data-filter="photography">Photography</button>
-          <button class="filter-option" data-filter="videos">Videos</button>
-          <button class="filter-option" data-filter="paintings">Paintings</button>
-          <button class="filter-option" data-filter="3dmodels">3D Models</button>
-        </div>
-      </div>
-    </div>
+    <nav class="filter-bar" aria-label="Filter portfolio items">
+      <button class="filter-option active" type="button" data-filter="all">All</button>
+      <button class="filter-option" type="button" data-filter="3dworks">3D Works</button>
+      <button class="filter-option" type="button" data-filter="photography">Photography</button>
+      <button class="filter-option" type="button" data-filter="videos">Videos</button>
+      <button class="filter-option" type="button" data-filter="paintings">Paintings</button>
+      <button class="filter-option" type="button" data-filter="3dmodels">3D Models</button>
+    </nav>
 
     <div class="image-collage" id="image-collage"></div>
   </main>

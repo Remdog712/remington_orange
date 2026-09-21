@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add modelSrc to open the 3D viewer or videoSrc/videoGroup to open the video modal.
     // -------------------------
     const images = [
+  { src: "WixMedia/Photography/BibiBirthday20250910_01.jpg", category: "photography", title: "Bibi in the Sun", description: "", alt: "Cat resting in warm sunlight" },
+  { src: "WixMedia/Photography/IMG_9794.jpg", category: "photography", title: "On the Leaf", description: "", alt: "Small insect on a green leaf" },
+  { src: "WixMedia/Photography/IMG_9798.jpg", category: "photography", title: "Late Summer", description: "", alt: "Wildflowers against a warm sky" },
   { src: "WixMedia/Photography/IMG_2101.jpg", category: "photography", title: "Enviormental Storytelling", description: "Part of Nature Reclaims Photo Essay", alt: "Photography 5" },
   { src: "WixMedia/Photography/IMG_3341.jpg", category: "photography", title: "Playing With The Big Toys", description: "Part of Nature Reclaims Photo Essay", alt: "Photography 16" },
   { src: "WixMedia/Photography/IMG_3796.jpg", category: "photography", title: "Freedom From The World", description: "", alt: "Photography 21" },
@@ -462,25 +465,11 @@ function openLightbox(imgSrc, title, description) {
         }
     });
 
-// 8. FIXED Filter Functionality
-const filterButton = document.querySelector('.filter-button');
-const filterDropdown = document.querySelector('.filter-dropdown'); // Target the container
+// 8. Filter Functionality
 const filterOptions = document.querySelectorAll('.filter-option');
 
-filterButton?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    // This matches your CSS: .filter-dropdown.active .filter-menu
-    filterDropdown?.classList.toggle('active'); 
-});
-
-// Close filter menu when clicking anywhere else
-window.addEventListener('click', () => {
-    filterDropdown?.classList.remove('active');
-});
-
 filterOptions.forEach(option => {
-    option.addEventListener('click', (e) => {
-        e.stopPropagation();
+    option.addEventListener('click', () => {
         const category = option.getAttribute('data-filter');
         
         // UI Update
@@ -490,8 +479,6 @@ filterOptions.forEach(option => {
         // Execute the filter
         filterImages(category);
         
-        // Close menu
-        filterDropdown?.classList.remove('active');
     });
 });
 

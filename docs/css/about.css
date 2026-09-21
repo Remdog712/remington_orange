@@ -113,6 +113,37 @@ main {
     line-height: 1.8;
 }
 
+.about-submenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 20px;
+}
+
+.about-submenu a {
+    color: #4A4A4A;
+    border: 1px solid rgba(217, 119, 66, 0.45);
+    border-radius: 999px;
+    padding: 8px 14px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.about-submenu a:hover,
+.about-submenu a:focus-visible {
+    background-color: #D97742;
+    color: #fff;
+}
+
+.scholarship-section,
+.awards-section,
+.mentions-section,
+.resume-section {
+    scroll-margin-top: 220px;
+}
+
 .about-blurb a {
     color: #D97742;
     text-decoration: none;
@@ -518,6 +549,15 @@ main {
 }
 
 @media only screen and (max-width: 480px) {
+    .about-submenu {
+        gap: 8px;
+    }
+
+    .about-submenu a {
+        padding: 7px 10px;
+        font-size: 0.8em;
+    }
+
     .profile-image {
         width: 140px;
     }

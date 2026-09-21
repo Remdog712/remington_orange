@@ -100,68 +100,33 @@ nav ul li a:hover {
     text-transform: none; /* Override uppercase for blurb */
 }
 
-/* Filter Dropdown */
-.filter-container {
-    margin-top: 20px;
-    text-align: center; /* Center the filter */
-    margin-left: 0; /* Remove left margin */
-    margin-bottom: 20px;
-}
-
-.filter-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.filter-button {
-    background: none;
-    border: none;
-    font-size: 1em;
-    color: #D97742; /* Changed to orange color */
-    cursor: pointer;
+/* Portfolio Filter Bar */
+.filter-bar {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-    font-family: 'League Spartan', sans-serif;
-}
-
-.filter-button:hover {
-    color: #E39361; /* Slightly lighter orange on hover */
-}
-
-.filter-menu {
-    display: none;
-    position: absolute;
-    top: 35px;
-    left: 0;
-    background-color: rgba(245, 245, 240, 0.95);
-    border: 1px solid #D97742;
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 101;
-}
-
-.filter-dropdown.active .filter-menu {
-    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 20px;
 }
 
 .filter-option {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: none;
-    text-align: left;
     color: #4A4A4A;
+    background-color: transparent;
+    border: 1px solid rgba(217, 119, 66, 0.45);
+    border-radius: 999px;
+    padding: 8px 14px;
     cursor: pointer;
-    font-size: 1em;
     font-family: 'League Spartan', sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .filter-option:hover,
+.filter-option:focus-visible,
 .filter-option.active {
-    background-color: #E39361;
+    background-color: #D97742;
     color: #fff;
 }
 
@@ -432,8 +397,13 @@ main {
         padding-top: 190px; /* Adjusted for mobile header */
     }
 
-    .filter-container {
-        margin-left: 20px;
+    .filter-bar {
+        gap: 8px;
+    }
+
+    .filter-option {
+        padding: 7px 10px;
+        font-size: 0.8em;
     }
 
     .about-blurb p {
