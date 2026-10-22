@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
   <link rel="icon" href="favicon.png" type="image/png" sizes="96x96" />
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -10,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
 
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
 
   <style>
     #modelbox {
@@ -96,13 +97,15 @@
       user-select: none;
     }
   </style>
+    <link rel="stylesheet" href="css/accessibility.css">
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
   <header id="main-header">
     <div class="header-content">
       <div class="logo">
-        <a href="/">
+        <a href="./">
           <img src="WixMedia/Website/RO_Logo.png" alt="Remington Orange Logo" class="logo-image">
           <img src="WixMedia/Website/NameLogo.png" alt="Remington Orange Name Logo" class="name-logo">
         </a>
@@ -117,7 +120,8 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
+    <h1 class="visually-hidden">Remington Orange Portfolio</h1>
     <nav class="filter-bar" aria-label="Filter portfolio items">
       <button class="filter-option active" type="button" data-filter="all">All</button>
       <button class="filter-option" type="button" data-filter="3dworks">3D Works</button>
@@ -131,14 +135,14 @@
   </main>
 
   <div id="lightbox">
-    <span class="close">&times;</span>
+    <button type="button" class="close" aria-label="Close viewer">&times;</button>
     <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
     <div id="lightbox-caption"></div>
   </div>
 
   <div id="videobox" aria-hidden="true">
     <div class="videobox-inner">
-      <span id="videobox-close" aria-label="Close">&times;</span>
+      <button type="button" id="videobox-close" aria-label="Close viewer">&times;</button>
       <div class="videobox-header">
         <h2 id="videobox-title"></h2>
         <p id="videobox-description"></p>
@@ -157,7 +161,7 @@
 
   <div id="modelbox" aria-hidden="true">
     <div class="modelbox-inner">
-      <span id="modelbox-close" aria-label="Close">&times;</span>
+      <button type="button" id="modelbox-close" aria-label="Close viewer">&times;</button>
       
       <div class="model-controls">
         <button id="toggle-wireframe" class="control-btn">
@@ -167,10 +171,6 @@
             <i class="fas fa-sync-alt"></i> Auto-Rotate
         </button>
       </div>
-    <div slot="progress-bar" class="progress-bar-container">
-        <div class="update-bar"></div>
-    </div>
-
       <model-viewer
         id="modelbox-viewer"
         alt="3D Model"
@@ -184,7 +184,7 @@
         exposure="1.2"
         poster=""
         touch-action="pan-y">
-            <div slot="progress-bar" class="progress-bar-container">
+            <div slot="progress-bar" class="progress-bar" role="progressbar" aria-label="Loading 3D model" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div class="update-bar"></div>
     </div>
       </model-viewer>
@@ -194,5 +194,7 @@
   </div>
 
   <script src="js/script.js"></script>
+    <script src="js/accessibility.js"></script>
 </body>
 </html>
+

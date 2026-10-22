@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
     <meta charset="UTF-8">
-    <title>Liberty Bell Content Creation</title>
+    <title>Liberty Bell Content Creation | Remington Orange</title>
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/accessibility.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
     <header id="main-header">
         <div class="header-content">
@@ -27,6 +30,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <div class="back-button">
         <a href="../portfolio/">&larr; Back to Projects</a>
@@ -174,8 +178,9 @@
         </div>
     </section>
 
+    </main>
     <div id="lightbox">
-        <span class="close">&times;</span>
+        <button type="button" class="close" aria-label="Close viewer">&times;</button>
         <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
         <div class="lightbox-description" id="lightbox-description"></div>
     </div>
@@ -184,5 +189,7 @@
     </footer>
 
     <script src="../js/project.js"></script>
+    <script src="../js/accessibility.js"></script>
 </body>
 </html>
+

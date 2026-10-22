@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../RO_Logo.ico" type="image/x-icon">
     <meta charset="UTF-8">
-    <title>Remington Orange Portfolio</title>
+    <title>Nature Reclaims - A Photo Essay | Remington Orange</title>
     <link rel="stylesheet" href="../css/PhotoEssay.css">
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
     <!-- Include Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/accessibility.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Background Image Div -->
     <div class="background-image"></div> <!-- Add this line here -->
@@ -36,6 +39,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <!-- Back Button -->
     <div class="back-button">
@@ -61,7 +65,7 @@
 
         <!-- YouTube Embed with Autoplay, Mute, and Hidden Controls -->
         <div class="youtube-container">
-            <iframe src="https://www.youtube.com/embed/90DRPAM_Q0w?autoplay=1&mute=1&controls=0&loop=1&playlist=90DRPAM_Q0w&modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <iframe title="Nature Reclaims - A Photo Essay embedded media" src="https://www.youtube.com/embed/90DRPAM_Q0w?autoplay=1&mute=1&controls=0&loop=1&playlist=90DRPAM_Q0w&modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
 
         <!-- Additional Text Between YouTube and First Image Section -->
@@ -159,9 +163,10 @@
         </div>
     </section>
 
+    </main>
     <!-- Lightbox for Gallery Images -->
     <div id="lightbox">
-        <span class="close">&times;</span>
+        <button type="button" class="close" aria-label="Close viewer">&times;</button>
         <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
         <div class="lightbox-description" id="lightbox-description"></div>
     </div>
@@ -172,5 +177,7 @@
 
     <!-- JavaScript -->
     <script src="../js/photoessay.js"></script>
+    <script src="../js/accessibility.js"></script>
 </body>
 </html>
+

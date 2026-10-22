@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   { src: "WixMedia/Photography/Webadd/Image4.jpg", category: "photography", title: "Nothing Like a Good Cleaning", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/Image5.jpg", category: "photography", title: "Cowboy Behavior", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/Image7.jpg", category: "photography", title: "Tiltshift Tools", description: "", alt: "Photography 35" },
-  { src: "WixMedia/Photography/Webadd/IMG_5860.jpg", category: "photography", title: "Inception", description: "", alt: "Photography 35" },
+  { src: "WixMedia/Photography/Webadd/IMG_5860.JPG", category: "photography", title: "Inception", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/IMG_5875.JPG", category: "photography", title: "Crumby Day", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/IMG_6321.jpg", category: "photography", title: "In Time", description: "", alt: "Photography 35" },
   { src: "WixMedia/Photography/Webadd/IMG_6370.jpg", category: "photography", title: "Somberly", description: "", alt: "Photography 35" },
@@ -220,7 +220,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!imageContainer) return;
 
     function createImageItem(item, index) {
-        const wrapper = document.createElement('div');
+        const wrapper = document.createElement('button');
+        wrapper.type = 'button';
+        wrapper.setAttribute('aria-label', `Open ${item.title || item.alt || 'portfolio item'}`);
         wrapper.className = 'image-item';
         wrapper.setAttribute('data-category', item.category);
         wrapper.setAttribute('data-index', String(index));
@@ -230,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const img = document.createElement('img');
         img.src = item.src;
-        img.alt = item.alt || item.title || 'Image';
+        img.alt = /^(Photography|3dworks) \d+$/i.test(item.alt || '') ? item.title : (item.alt || item.title || 'Portfolio image');
         img.setAttribute('data-title', item.title || '');
         img.setAttribute('data-description', item.description || '');
         if (item.modelSrc) img.setAttribute('data-model-src', item.modelSrc);
@@ -272,11 +274,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const wireframeBtn = document.getElementById('toggle-wireframe');
     const rotateBtn = document.getElementById('toggle-auto-rotate');
     let isWireframe = false;
+    let progressHideTimer;
 
     // 5. Open/Close Functions
 function openLightbox(imgSrc, title, description) {
     if (!lightbox) return;
     lightboxImg.src = imgSrc;
+    lightboxImg.alt = title || description || 'Portfolio image';
     lightboxCaption.textContent = title + (description ? ` - ${description}` : '');
     lightbox.style.display = 'flex'; // This ensures the background covers the screen
 }
@@ -365,11 +369,25 @@ function openLightbox(imgSrc, title, description) {
     function openModelbox(modelSrc, posterSrc, title, description) {
         if (!modelbox || !modelboxViewer) return;
         
+        // Reset loading UI and controls for each model.
+        clearTimeout(progressHideTimer);
+        const loadingBar = modelboxViewer.querySelector('.progress-bar');
+        if (loadingBar) {
+            loadingBar.style.display = 'block';
+            loadingBar.setAttribute('aria-valuenow', '0');
+            loadingBar.querySelector('.update-bar').style.width = '0%';
+        }
         // Reset Wireframe State for new model
         isWireframe = false;
         wireframeBtn?.classList.remove('active');
+        if (wireframeBtn) { wireframeBtn.disabled = false; wireframeBtn.textContent = 'Wireframe'; }
         
         modelboxCaption.textContent = title + (description ? ` - ${description}` : '');
+        if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+            modelboxViewer.autoRotate = false;
+            rotateBtn?.classList.remove('active');
+        }
+        modelboxViewer.setAttribute('alt', title + (description ? ' - ' + description : ''));
         modelboxViewer.setAttribute('poster', posterSrc);
         modelboxViewer.setAttribute('src', modelSrc);
         
@@ -404,13 +422,18 @@ function openLightbox(imgSrc, title, description) {
 
     // 6. Mesh/Viewer Controls (FIXED WIREFRAME)
     wireframeBtn?.addEventListener('click', () => {
-        isWireframe = !isWireframe;
-        wireframeBtn.classList.toggle('active', isWireframe);
-
-        // Access internal Three.js scene via Symbols
         const symbols = Object.getOwnPropertySymbols(modelboxViewer);
         const sceneSymbol = symbols.find(s => s.description === 'scene');
         const scene = modelboxViewer[sceneSymbol];
+        if (!scene || typeof scene.traverse !== 'function') {
+            wireframeBtn.disabled = true;
+            wireframeBtn.textContent = 'Wireframe unavailable';
+            return;
+        }
+        isWireframe = !isWireframe;
+        wireframeBtn.classList.toggle('active', isWireframe);
+
+        // Compatibility adapter for the pinned viewer version.
 
         if (scene) {
             scene.traverse((object) => {
@@ -453,12 +476,14 @@ function openLightbox(imgSrc, title, description) {
 
     // --- Loading Progress Handler ---
     modelboxViewer?.addEventListener('progress', (event) => {
-        const progressBar = document.querySelector('.update-bar');
+        const progressBar = modelboxViewer.querySelector('.update-bar');
         if (progressBar) {
+            clearTimeout(progressHideTimer);
             const progress = event.detail.totalProgress * 100;
             progressBar.style.width = `${progress}%`;
+            progressBar.parentElement.setAttribute('aria-valuenow', String(Math.round(progress)));
             if (progress === 100) {
-                setTimeout(() => progressBar.parentElement.style.display = 'none', 500);
+                progressHideTimer = setTimeout(() => progressBar.parentElement.style.display = 'none', 500);
             } else {
                 progressBar.parentElement.style.display = 'block';
             }
@@ -497,3 +522,4 @@ function filterImages(category) {
     // Default state
     filterImages('all');
 });
+
